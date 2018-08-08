@@ -1,0 +1,12 @@
+.male {
+  background-color: lightblue !important;
+}
+
+.female {
+  background-color: lightpink !important;
+}
+
+ul {
+  padding-left: 0.7em !important;
+  font-size: 0.7em !important;
+}
