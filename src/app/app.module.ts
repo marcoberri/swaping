@@ -2,8 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
-
-
 // Prime ng
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
@@ -17,10 +15,10 @@ import { ItemDetailsComponent } from './components/item-details/item-details.com
 // Principale
 import { AppComponent } from './app.component';
 
-
 // Routing
 import { routingModule } from './app.routing';
 import { ItemListPeopleComponent } from './components/item-list-people/item-list-people.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -34,17 +32,14 @@ import { ItemListPeopleComponent } from './components/item-list-people/item-list
     BrowserModule,
     routingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
 
     // PrimeNG
     ButtonModule,
     TableModule,
-    DialogModule,
-
-
+    DialogModule
   ],
-  providers: [
-
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

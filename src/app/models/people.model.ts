@@ -3,7 +3,7 @@ import { Film } from './film.model';
 import { Specie } from './specie.model';
 import { Homeworld } from './homeworld.model';
 import { Base } from './base.model';
-import { Vehicle } from './vehicle.model.';
+import { Vehicle } from './vehicle.model';
 
 export class People extends Base {
   name: string;

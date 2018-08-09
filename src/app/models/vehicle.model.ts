@@ -1,27 +1,45 @@
 import { Base } from './base.model';
-export class Starship extends Base {
+import { Film } from './film.model';
+
+export class Vehicle extends Base {
   name: string;
-  model: string;
-  starship_class: string;
-  passengers: string;
   cargo_capacity: string;
+  consumables: string;
   cost_in_credits: string;
   crew: string;
-  hyperdrive_rating: string;
   length: string;
   manufacturer: string;
   max_atmosphering_speed: string;
+  model: string;
+  passengers: string;
+  vehicle_class: string;
+  films: Film[];
+
+  /*    "pilots": [],
+    "films": [
+        "https://swapi.co/api/films/1/"
+    ],
+    "url": "https://swapi.co/api/vehicles/4/",
+    */
 }
 
-export const StartShipFields = [
+export const VehicleFields = [
   {
     label: 'Name',
     field: 'name'
   },
-
   {
     label: 'Cargo Capacity',
     field: 'cargo_capacity'
+  },
+  {
+    label: 'Cost in credits',
+    field: 'cost_in_credits'
+  },
+
+  {
+    label: 'Crew',
+    field: 'crew'
   },
 
   {
@@ -30,37 +48,31 @@ export const StartShipFields = [
   },
 
   {
-    label: 'Cost in Credits',
-    field: 'cost_in_credits'
-  },
-
-  {
-    label: 'Crew',
-    field: 'crew'
-  },
-  {
-    label: 'Hyperdrive rating',
-    field: 'hyperdrive_rating'
-  },
-
-  {
     label: 'Length',
     field: 'length'
   },
+
   {
     label: 'Manufacturer',
     field: 'manufacturer'
   },
+
   {
-    label: 'Max Atmosphering Speed',
+    label: 'Maxa atmosphering speed',
     field: 'max_atmosphering_speed'
   },
+
   {
-    label: 'model',
+    label: 'Model',
     field: 'model'
   },
+
   {
     label: 'Passengers',
     field: 'passengers'
+  },
+  {
+    label: 'Vehicle class',
+    field: 'vehicle_class'
   }
 ];

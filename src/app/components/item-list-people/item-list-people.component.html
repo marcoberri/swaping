@@ -67,7 +67,7 @@
 
         <ul>
           <li *ngFor="let ss of item.starshipsObj">
-            <a (click)="displayModalStarship(ss)">{{ss.name}}</a>
+            <a (click)="displayModalPannel(ss,'starship')">{{ss.name}}</a>
           </li>
         </ul>
 
@@ -77,7 +77,7 @@
 
         <ul>
           <li *ngFor="let ss of item.vehiclesObj">
-            {{ss.name}}
+            <a (click)="displayModalPannel(ss,'veichle')">{{ss.name}}</a>
           </li>
         </ul>
 
@@ -88,34 +88,25 @@
 
         <ul>
           <li *ngFor="let ss of item.filmsObj">
-            {{ss.title}}
+            <a (click)="displayModalPannel(ss,'film')">{{ss.title}}</a>
           </li>
         </ul>
 
       </td>
 
-      <!--
-      name: string
-      height: string
-      mass: number
-      hair_color: string
-      skin_color: string
-      eye_color: string
-      birth_year: string
-      gender: string
-      homeworld: string
-      films: string
-      species: string
-      vehicles: string
-      starships: string
-      url: string
-      created: string
-      edited: string
--->
     </tr>
   </ng-template>
 </p-table>
 
-<p-dialog header="StartShip" [(visible)]="displayStarshipModal" [width]="300" [modal]="true">
-  Content
+<p-dialog header="{{modalItem?.name}}{{modalItem?.title}}" [(visible)]="displayModal" [width]="500" [modal]="true" *ngIf="modalItem">
+
+  <p-table [value]="customFields">
+    <ng-template pTemplate="body" let-item>
+      <tr>
+        <td>{{item.label}}</td>
+        <td>{{modalItem[item.field]}}</td>
+      </tr>
+    </ng-template>
+
+  </p-table>
 </p-dialog>
