@@ -2,33 +2,30 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../../services/api.service';
 import { LazyLoadEvent } from 'primeng/primeng';
-import { People } from '../../models/people.model';
-
-import { StartShipFields } from '../../models/starship.model';
-import { VehicleFields } from '../../models/vehicle.model';
-import { FilmFields } from '../../models/film.model';
+import { Planet } from '../../models/planet.model';
 
 @Component({
-  selector: 'app-item-list-people',
-  templateUrl: './item-list-people.component.html',
-  styleUrls: ['./item-list-people.component.css']
+  selector: 'app-item-list-planet',
+  templateUrl: './item-list-planet.component.html',
+  styleUrls: ['./item-list-planet.component.css']
 })
-export class ItemListPeopleComponent implements OnInit {
-  public loadData: People[];
+export class ItemListPlanetComponent implements OnInit {
+  public loadData: Planet[];
 
   public totalRecords: number;
   public loading = true;
   public currentPage = 1;
 
+  public customFields;
+
   /**
-   * Gestione della modal con le specifiche dell'object
+   *Gestione della modal con le specifiche dell'object
    *
-   * @memberof ItemListPeopleComponent
+   * @memberof ItemListPlanetComponent
    */
   public modalItem;
   public displayModalDetail = false;
   public modalType: string;
-
   /**
    *Aggancio un observer ai paramtri ricevuti in path, ogni volta che cambiano effettuo un caricamento diverso per la prima pagina almeno
    * @param {ApiService} apiService
@@ -42,7 +39,7 @@ export class ItemListPeopleComponent implements OnInit {
   /**
    *Caricamento e configurazione tabella principale
    *
-   * @private
+   * @public
    * @memberof ItemListComponent
    */
   public loadDataAndConfigureTable(event: LazyLoadEvent) {
@@ -53,14 +50,10 @@ export class ItemListPeopleComponent implements OnInit {
       this.currentPage++;
     }
     this.loading = true;
-    this.apiService.getUrlPages(this.currentPage, 'people').then(data => {
+    this.apiService.getUrlPages(this.currentPage, 'planets').then(data => {
       data.results.forEach(item => {
-        this.apiService.getLookUpList(item.starships, (item.starshipsObj = []));
         this.apiService.getLookUpList(item.films, (item.filmsObj = []));
-        this.apiService.getLookUpList(item.species, (item.speciesObj = []));
-        this.apiService.getLookUpList(item.vehicles, (item.vehiclesObj = []));
-
-        item.homeworldObj = this.apiService.getLookUp(item.homeworld);
+        this.apiService.getLookUpList(item.residents, (item.residentsObj = []));
       });
 
       this.loadData = data.results;

@@ -1,16 +1,7 @@
-import { Base } from './base.model';
-export class Starship extends Base {
-  name: string;
-  model: string;
+import { Macchine } from './macchine.model';
+export class Starship extends Macchine {
   starship_class: string;
-  passengers: string;
-  cargo_capacity: string;
-  cost_in_credits: string;
-  crew: string;
   hyperdrive_rating: string;
-  length: string;
-  manufacturer: string;
-  max_atmosphering_speed: string;
 }
 
 export const StartShipFields = [

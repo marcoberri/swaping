@@ -1,26 +1,14 @@
-import { Base } from './base.model';
 import { Film } from './film.model';
+import { Macchine } from './macchine.model';
+import { People } from './people.model';
 
-export class Vehicle extends Base {
-  name: string;
-  cargo_capacity: string;
+export class Vehicle extends Macchine {
   consumables: string;
-  cost_in_credits: string;
-  crew: string;
-  length: string;
-  manufacturer: string;
-  max_atmosphering_speed: string;
-  model: string;
-  passengers: string;
   vehicle_class: string;
-  films: Film[];
-
-  /*    "pilots": [],
-    "films": [
-        "https://swapi.co/api/films/1/"
-    ],
-    "url": "https://swapi.co/api/vehicles/4/",
-    */
+  films: string;
+  filmsObj: Film[];
+  pilots: string;
+  pilotsObj: People[];
 }
 
 export const VehicleFields = [

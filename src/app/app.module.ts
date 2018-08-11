@@ -9,7 +9,8 @@ import { DialogModule } from 'primeng/dialog';
 
 // Componeti del mio progetto
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { ItemListComponent } from './components/item-list/item-list.component';
+import { ItemListPeopleComponent } from './components/item-list-people/item-list-people.component';
+import { ItemListPlanetComponent } from './components/item-list-planet/item-list-planet.component';
 import { ItemDetailsComponent } from './components/item-details/item-details.component';
 
 // Principale
@@ -17,15 +18,14 @@ import { AppComponent } from './app.component';
 
 // Routing
 import { routingModule } from './app.routing';
-import { ItemListPeopleComponent } from './components/item-list-people/item-list-people.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    ItemListComponent,
     ItemListPeopleComponent,
+    ItemListPlanetComponent,
     ItemDetailsComponent
   ],
   imports: [

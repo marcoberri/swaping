@@ -1,3 +1,15 @@
-<p>
-  item-details works!
-</p>
+ {{displayModal}} - {{modalItem !== null}}
+
+<p-dialog (onHide)="onHideModal($event)" header="{{modalItem?.name}}{{modalItem?.title}}" [(visible)]="displayModal" [width]="500"
+  [modal]="true" *ngIf="modalItem">
+
+  <p-table [value]="customFields">
+    <ng-template pTemplate="body" let-item>
+      <tr>
+        <td>{{item.label}}</td>
+        <td>{{modalItem[item.field]}}</td>
+      </tr>
+    </ng-template>
+
+  </p-table>
+</p-dialog>
