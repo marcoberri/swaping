@@ -1,5 +1,11 @@
 <div class="ui-g">
-  <div class="ui-g-10">
+  <div class="ui-g-2">
+    <a target="_new" href="https://commons.wikimedia.org/wiki/File:Star_Wars_Logo_2.svg#/media/File:Star_Wars_Logo_2.svg">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Star_Wars_Logo_2.svg/100px-Star_Wars_Logo_2.svg.png"
+        alt="Star Wars Logo 2.svg">
+    </a>
+  </div>
+  <div class="ui-g-8">
     <nav>
       <span *ngFor="let key of keys" style="float:left;margin-left:30px;">
         <p-button label="{{key}}" (click)="onClickNavigateList(key)"></p-button>
@@ -8,7 +14,9 @@
 
   </div>
   <div class="ui-g-2">
-    <a href="https://swapi.co" target="_new">API from swapi.co</a>
+    <a href="https://swapi.co" target="_new">
+      <img src="/assets/swapi.png" alt="API from swapi.co" height="60px;">
+    </a>
   </div>
 
   <div class="ui-g-12">

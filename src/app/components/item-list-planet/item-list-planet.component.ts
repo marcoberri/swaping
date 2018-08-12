@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../../services/api.service';
 import { LazyLoadEvent } from 'primeng/primeng';
@@ -51,10 +51,7 @@ export class ItemListPlanetComponent implements OnInit {
     }
     this.loading = true;
     this.apiService.getUrlPages(this.currentPage, 'planets').then(data => {
-      data.results.forEach(item => {
-        this.apiService.getLookUpList(item.films, (item.filmsObj = []));
-        this.apiService.getLookUpList(item.residents, (item.residentsObj = []));
-      });
+      data.results.forEach(d => this.apiService.elaborateLookup(d));
 
       this.loadData = data.results;
 

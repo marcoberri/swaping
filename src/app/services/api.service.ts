@@ -88,4 +88,31 @@ export class ApiService {
       }
     });
   }
+
+  public elaborateLookup(item: any) {
+    if (!item) {
+      return;
+    }
+
+    if (item.starships) {
+      this.getLookUpList(item.starships, (item.starshipsObj = []));
+    }
+
+    if (item['films']) {
+      this.getLookUpList(item['films'], (item['filmsObj'] = []));
+    }
+    if (item['species']) {
+      this.getLookUpList(item.species, (item.speciesObj = []));
+    }
+    if (item['vehicles']) {
+      this.getLookUpList(item.vehicles, (item.vehiclesObj = []));
+    }
+    if (item['residents']) {
+      this.getLookUpList(item.residents, (item.residentsObj = []));
+    }
+
+    if (item['homeworld']) {
+      item.homeworldObj = this.getLookUp(item.homeworld);
+    }
+  }
 }

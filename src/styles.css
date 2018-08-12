@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  background: #1C1e22
+}
+
+.male {
+  background-color: lightblue !important;
+}
+
+.female {
+  background-color: lightpink !important;
+}
+
+ul {
+  padding-left: 0.7em !important;
+  font-size: 0.7em !important;
+}
+
+.pointer {
+  cursor: pointer !important;
+}
+
+tr {
+  font-size: 0.9em !important;
+}

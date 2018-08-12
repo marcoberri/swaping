@@ -1,8 +1,9 @@
 import { RouterModule, Routes } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
-import { ItemDetailsComponent } from './components/item-details/item-details.component';
+
 import { ItemListPeopleComponent } from './components/item-list-people/item-list-people.component';
 import { ItemListPlanetComponent } from './components/item-list-planet/item-list-planet.component';
+import { ItemListFilmComponent } from './components/item-list-film/item-list-film.component';
 
 /**
  * Rotte di navigazione
@@ -10,7 +11,8 @@ import { ItemListPlanetComponent } from './components/item-list-planet/item-list
 const routes: Routes = [
   // { path: '', component: DashboardComponent },
   { path: 'list/people', component: ItemListPeopleComponent },
-  { path: 'list/planets', component: ItemListPlanetComponent }
+  { path: 'list/planets', component: ItemListPlanetComponent },
+  { path: 'list/films', component: ItemListFilmComponent }
   // { path: '', redirectTo: '/', pathMatch: 'full' }
 ];
 

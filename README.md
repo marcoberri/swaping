@@ -1,6 +1,15 @@
 # SwapiNG
 
-Sample Angular Application
+Sample Angular Application for display http://swapi.co API.
+
+- PrimeNG widget https://www.primefaces.org/primeng/
+- Cache lookup value in Session Storage
+
+## TODO
+
+- Karma
+- e2e
+- sort table column
 
 ## Development server
 

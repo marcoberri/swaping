@@ -2,15 +2,15 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../../services/api.service';
 import { LazyLoadEvent } from 'primeng/primeng';
-import { People } from '../../models/people.model';
+import { Film } from '../../models/film.model';
 
 @Component({
-  selector: 'app-item-list-people',
-  templateUrl: './item-list-people.component.html',
-  styleUrls: ['./item-list-people.component.css']
+  selector: 'app-item-list-film',
+  templateUrl: './item-list-film.component.html',
+  styleUrls: ['./item-list-film.component.css']
 })
-export class ItemListPeopleComponent implements OnInit {
-  public loadData: People[];
+export class ItemListFilmComponent implements OnInit {
+  public loadData: Film[];
 
   public totalRecords: number;
   public loading = true;
@@ -19,7 +19,7 @@ export class ItemListPeopleComponent implements OnInit {
   /**
    * Gestione della modal con le specifiche dell'object
    *
-   * @memberof ItemListPeopleComponent
+   * @memberof ItemListfilmComponent
    */
   public modalItem;
   public displayModalDetail = false;
@@ -49,11 +49,9 @@ export class ItemListPeopleComponent implements OnInit {
       this.currentPage++;
     }
     this.loading = true;
-    this.apiService.getUrlPages(this.currentPage, 'people').then(data => {
+    this.apiService.getUrlPages(this.currentPage, 'films').then(data => {
       data.results.forEach(d => this.apiService.elaborateLookup(d));
-
       this.loadData = data.results;
-
       this.totalRecords = data.count;
       this.loading = false;
     });

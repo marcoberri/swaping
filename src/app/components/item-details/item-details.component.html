@@ -1,5 +1,3 @@
- {{displayModal}} - {{modalItem !== null}}
-
 <p-dialog (onHide)="onHideModal($event)" header="{{modalItem?.name}}{{modalItem?.title}}" [(visible)]="displayModal" [width]="500"
   [modal]="true" *ngIf="modalItem">
 
