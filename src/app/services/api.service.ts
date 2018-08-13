@@ -99,7 +99,7 @@ export class ApiService {
     }
 
     if (item['films']) {
-      this.getLookUpList(item['films'], (item['filmsObj'] = []));
+      this.getLookUpList(item.films, (item.filmsObj = []));
     }
     if (item['species']) {
       this.getLookUpList(item.species, (item.speciesObj = []));
@@ -109,6 +109,14 @@ export class ApiService {
     }
     if (item['residents']) {
       this.getLookUpList(item.residents, (item.residentsObj = []));
+    }
+
+    if (item['planets']) {
+      this.getLookUpList(item.planets, (item.planetsObj = []));
+    }
+
+    if (item['characters']) {
+      this.getLookUpList(item.characters, (item.charatersObj = []));
     }
 
     if (item['homeworld']) {

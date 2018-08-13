@@ -1,4 +1,8 @@
 import { Base } from './base.model';
+import { Specie } from './specie.model';
+import { Planet } from './planet.model';
+import { Vehicle } from './vehicle.model';
+import { People } from './people.model';
 export class Film extends Base {
   title: string;
   director: string;
@@ -6,13 +10,14 @@ export class Film extends Base {
   opening_crawl: string;
   producer: string;
   release_date: string;
-  //species:string;
-  //"characters": People[];
-  //"planets": People[];
-  /*    "vehicles": [
-        "https://swapi.co/api/vehicles/4/",
-        ...
-    ]*/
+  species: string;
+  speciesObj: Specie[];
+  characters: string;
+  charactersObj: People[];
+  planets: string;
+  planetsObj: Planet[];
+  vehicles: string;
+  vehiclesObj: Vehicle[];
 }
 
 export const FilmFields = [

@@ -1,14 +1,12 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../../services/api.service';
-import { LazyLoadEvent } from 'primeng/primeng';
-import { Planet } from '../../models/planet.model';
 import { StartShipFields } from '../../models/starship.model';
 import { VehicleFields } from '../../models/vehicle.model';
 import { PlanetFields } from '../../models/planet.model';
 import { FilmFields } from '../../models/film.model';
 import { PeopleFields } from '../../models/people.model';
-
+import { SpecieFields } from '../../models/specie.model';
 @Component({
   selector: 'app-item-details',
   templateUrl: './item-details.component.html',
@@ -29,6 +27,9 @@ export class ItemDetailsComponent implements OnInit {
 
   @Input()
   set objecttype(value: string) {
+    if (!value) {
+      return;
+    }
     switch (value) {
       case 'starship':
         this.customFields = StartShipFields;
@@ -41,6 +42,12 @@ export class ItemDetailsComponent implements OnInit {
         break;
       case 'people':
         this.customFields = PeopleFields;
+        break;
+      case 'planet':
+        this.customFields = PlanetFields;
+        break;
+      case 'specie':
+        this.customFields = SpecieFields;
         break;
       default:
         console.log('Spiacenti, non abbiamo ' + value);
