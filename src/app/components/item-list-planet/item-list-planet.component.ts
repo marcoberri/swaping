@@ -12,7 +12,7 @@ import { ItemListBase } from '../item-list-base';
 })
 export class ItemListPlanetComponent extends ItemListBase {
   public loadData: Planet[];
-  public mainUrl = 'peoples';
+  public mainUrl = 'planets';
 
   /**
    *Aggancio un observer ai paramtri ricevuti in path, ogni volta che cambiano effettuo un caricamento diverso per la prima pagina almeno

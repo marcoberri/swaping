@@ -1,44 +1,32 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../../services/api.service';
 import { LazyLoadEvent } from 'primeng/primeng';
 import { Film } from '../../models/film.model';
+import { ItemListBase } from '../item-list-base';
 
 @Component({
   selector: 'app-item-list-film',
   templateUrl: './item-list-film.component.html',
   styleUrls: ['./item-list-film.component.css']
 })
-export class ItemListFilmComponent implements OnInit {
+export class ItemListFilmComponent extends ItemListBase {
   public loadData: Film[];
-
-  public totalRecords: number;
-  public loading = true;
-  public currentPage = 1;
-
-  /**
-   * Gestione della modal con le specifiche dell'object
-   *
-   * @memberof ItemListfilmComponent
-   */
-  public modalItem;
-  public displayModalDetail = false;
-  public modalType: string;
-
+  public mainUrl = 'films';
   /**
    *Aggancio un observer ai paramtri ricevuti in path, ogni volta che cambiano effettuo un caricamento diverso per la prima pagina almeno
    * @param {ApiService} apiService
    * @param {ActivatedRoute} route
    * @memberof ItemListComponent
    */
-  constructor(private apiService: ApiService, private route: ActivatedRoute) {}
-
-  ngOnInit() {}
+  constructor(private apiService: ApiService, private route: ActivatedRoute) {
+    super();
+  }
 
   /**
    *Caricamento e configurazione tabella principale
    *
-   * @private
+   * @public
    * @memberof ItemListComponent
    */
   public loadDataAndConfigureTable(event: LazyLoadEvent) {
@@ -49,36 +37,13 @@ export class ItemListFilmComponent implements OnInit {
       this.currentPage++;
     }
     this.loading = true;
-    this.apiService.getUrlPages(this.currentPage, 'films').then(data => {
+    this.apiService.getUrlPages(this.currentPage, this.mainUrl).then(data => {
       data.results.forEach(d => this.apiService.elaborateLookup(d));
+
       this.loadData = data.results;
+
       this.totalRecords = data.count;
       this.loading = false;
     });
-  }
-
-  /**
-   *Reseta la modal sull'evento di chiusura dello stesso
-   *
-   * @param {Event} Event
-   * @memberof ItemListPlanetComponent
-   */
-  public resetModal(Event: Event) {
-    this.displayModalDetail = false;
-    this.modalItem = null;
-    this.modalType = null;
-  }
-
-  /**
-   * Visualizza la modale con le info dell'object richiesto
-   *
-   * @param {*} item
-   * @param {string} type
-   * @memberof ItemListPlanetComponent
-   */
-  public displayModalPannel(item: any, type: string) {
-    this.displayModalDetail = true;
-    this.modalItem = item;
-    this.modalType = type;
   }
 }
