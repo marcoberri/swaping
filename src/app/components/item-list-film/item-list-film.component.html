@@ -1,33 +1,33 @@
 <p-table [value]="loadData" [totalRecords]="totalRecords" [paginator]="true" [rows]="10" [loading]="loading" [lazy]="true"
   (onLazyLoad)="loadDataAndConfigureTable($event)" [paginator]="true">
   <ng-template pTemplate="header">
-    <tr style="font-size: 0.9em">
-      <th>
+    <tr style="font-size: 0.8em">
+      <th style="width:120px;">
         Title
       </th>
-      <th style="width:60px;">
+      <th style="width:100px;">
         Director
       </th>
-      <th style="width:80px;">
-        Episode id
-      </th>
-      <th style="width:90px;">
-        Opening crawl
-      </th>
-      <th style="width:80px;">
-        Producer
-      </th>
-      <th style="width:80px;">
-        Release Date
+      <th style="width:40px;">
+        Ep
       </th>
       <th>
+        Opening crawl
+      </th>
+      <th style="width:120px;">
+        Producer
+      </th>
+      <th tyle="width:20px;">
+        Release
+      </th>
+      <th style="width:90px;">
         Species
       </th>
       <th>
         Characters
       </th>
 
-      <th>
+      <th style="width:80px;">
         Planets
       </th>
 
@@ -46,24 +46,23 @@
         {{item.director}}
       </td>
 
-      <td>
+      <td style="text-align: center;">
         {{item.episode_id}}
       </td>
 
-      <td>
+      <td class="reducetext" pTooltip="{{item.opening_crawl}}" tooltipPosition="right">
         {{item.opening_crawl}}
       </td>
       <td>
         {{item.producer}}
       </td>
-      <td>
+      <td style="text-align: center;">
         {{item.release_date}}
       </td>
       <td>
         <ul>
-          <li *ngFor="let ss of item.speciesObj">
-
-            <a class="pointer" (click)="displayModalPannel(ss,'specie')">{{ss.name}}</a>
+          <li *ngFor="let ss of item.speciesObj" (click)="displayModalPannel(ss,'specie')">
+            <a class="pointer">{{ss.name}}</a>
           </li>
         </ul>
 

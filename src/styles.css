@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-  background: #1C1e22
+  background: #1c1e22;
 }
 
 .male {
@@ -13,8 +13,10 @@ body {
 }
 
 ul {
-  padding-left: 0.7em !important;
-  font-size: 0.7em !important;
+  list-style-image: url('/assets/i.png');
+  padding-left: 1.5em;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .pointer {
@@ -22,5 +24,14 @@ ul {
 }
 
 tr {
+  font-size: 0.8em !important;
+}
+
+td {
   font-size: 0.9em !important;
+  vertical-align: top;
+}
+
+.nobullet {
+  list-style: none !important;
 }

@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
+import { TooltipModule } from 'primeng/tooltip';
 
 // Componeti del mio progetto
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -39,7 +40,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     // PrimeNG
     ButtonModule,
     TableModule,
-    DialogModule
+    DialogModule,
+    TooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

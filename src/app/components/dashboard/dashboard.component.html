@@ -6,12 +6,9 @@
     </a>
   </div>
   <div class="ui-g-8">
-    <nav>
-      <span *ngFor="let key of keys" style="float:left;margin-left:30px;">
-        <p-button label="{{key}}" (click)="onClickNavigateList(key)"></p-button>
-      </span>
-    </nav>
-
+    <span *ngFor="let key of keys" style="float:left;margin-left:30px;">
+      <p-button label="{{key}}" (click)="onClickNavigateList(key)" styleClass="ui-button-rounded ui-button-warning"></p-button>
+    </span>
   </div>
   <div class="ui-g-2">
     <a href="https://swapi.co" target="_new">

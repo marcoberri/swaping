@@ -116,7 +116,7 @@ export class ApiService {
     }
 
     if (item['characters']) {
-      this.getLookUpList(item.characters, (item.charatersObj = []));
+      this.getLookUpList(item.characters, (item.charactersObj = []));
     }
 
     if (item['homeworld']) {

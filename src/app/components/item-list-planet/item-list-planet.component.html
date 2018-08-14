@@ -1,7 +1,7 @@
 <p-table [value]="loadData" [totalRecords]="totalRecords" [paginator]="true" [rows]="10" [loading]="loading" [lazy]="true"
   (onLazyLoad)="loadDataAndConfigureTable($event)" [paginator]="true">
   <ng-template pTemplate="header">
-    <tr style="font-size: 0.9em">
+    <tr>
       <th>
         Name
       </th>
@@ -10,7 +10,7 @@
         Climate
       </th>
 
-      <th>
+      <th style="width: 80px;">
         Diameter
       </th>
 
@@ -18,7 +18,7 @@
         Gravity
       </th>
 
-      <th>
+      <th style="width: 80px;">
         Orbital Period
       </th>
 
@@ -26,11 +26,11 @@
         Population
       </th>
 
-      <th>
-        Rotation period
+      <th style="width: 80px;">
+        Rotation
       </th>
 
-      <th>
+      <th style="width: 80px;">
         Surface Water
       </th>
 

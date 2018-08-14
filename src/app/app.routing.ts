@@ -12,8 +12,8 @@ const routes: Routes = [
   // { path: '', component: DashboardComponent },
   { path: 'list/people', component: ItemListPeopleComponent },
   { path: 'list/planets', component: ItemListPlanetComponent },
-  { path: 'list/films', component: ItemListFilmComponent }
-  // { path: '', redirectTo: '/', pathMatch: 'full' }
+  { path: 'list/films', component: ItemListFilmComponent },
+  { path: '**', component: ItemListPeopleComponent }
 ];
 
 export const routingModule: ModuleWithProviders = RouterModule.forRoot(routes, {
