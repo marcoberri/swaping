@@ -2,9 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { People } from '../models/people.model';
 import { Page } from '../models/page.model';
-import { Starship } from '../models/starship.model';
-import { Film } from '../models/film.model';
-import { Specie } from '../models/specie.model';
 
 @Injectable({
   providedIn: 'root'

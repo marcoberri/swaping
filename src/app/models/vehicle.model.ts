@@ -1,15 +1,39 @@
 import { Film } from './film.model';
 import { Macchine } from './macchine.model';
 import { People } from './people.model';
-
+/**
+ * Oggetto del mapping del veicolo
+ */
 export class Vehicle extends Macchine {
   consumables: string;
+  /**
+   * Classe del veicolo
+   */
   vehicle_class: string;
+  /**
+   * mapping dei film url
+   */
   films: string;
+  /**
+   * mapping dei film obj
+   */
+
   filmsObj: Film[];
+  /**
+   * mapping dei personaggi
+   */
+
   pilots: string;
+  /**
+   * mapping dei personaggi obj
+   */
+
   pilotsObj: People[];
 }
+
+/**
+ * Mapping per la gestione delle lookup in visualizzazione su pop-up
+ */
 
 export const VehicleFields = [
   {

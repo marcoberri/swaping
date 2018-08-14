@@ -1,9 +1,21 @@
 import { Macchine } from './macchine.model';
+/**
+ * Oggetto per le navi da battaglia
+ */
 export class Starship extends Macchine {
+  /**
+   * Classe della nava
+   */
   starship_class: string;
+  /**
+   * Rating di velocità
+   */
   hyperdrive_rating: string;
 }
 
+/**
+ * Oggetti per la gestione dello lookup in visualizzazione
+ */
 export const StartShipFields = [
   {
     label: 'Name',
