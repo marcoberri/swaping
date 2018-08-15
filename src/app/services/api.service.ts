@@ -95,28 +95,32 @@ export class ApiService {
       this.getLookUpList(item.starships, (item.starshipsObj = []));
     }
 
-    if (item['films']) {
+    if (item.films) {
       this.getLookUpList(item.films, (item.filmsObj = []));
     }
-    if (item['species']) {
+    if (item.species) {
       this.getLookUpList(item.species, (item.speciesObj = []));
     }
-    if (item['vehicles']) {
+    if (item.vehicles) {
       this.getLookUpList(item.vehicles, (item.vehiclesObj = []));
     }
-    if (item['residents']) {
+    if (item.residents) {
       this.getLookUpList(item.residents, (item.residentsObj = []));
     }
 
-    if (item['planets']) {
+    if (item.planets) {
       this.getLookUpList(item.planets, (item.planetsObj = []));
     }
 
-    if (item['characters']) {
+    if (item.characters) {
       this.getLookUpList(item.characters, (item.charactersObj = []));
     }
 
-    if (item['homeworld']) {
+    if (item.people) {
+      this.getLookUpList(item.people, (item.peoplesObj = []));
+    }
+
+    if (item.homeworld) {
       item.homeworldObj = this.getLookUp(item.homeworld);
     }
   }

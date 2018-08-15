@@ -51,7 +51,7 @@ export class Specie extends Base {
   /**
    * Casa natale obj
    */
-  homeworlObj: Planet;
+  homeworldObj: Planet;
 
   /**
    * Lingua
