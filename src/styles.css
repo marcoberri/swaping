@@ -35,3 +35,11 @@ td {
 .nobullet {
   list-style: none !important;
 }
+
+.center {
+  text-align: center !important;
+}
+
+.main {
+  font-weight: bold !important;
+}

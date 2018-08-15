@@ -31,11 +31,16 @@ export class Specie extends Base {
    */
   designation: string;
   /**
-   * colo degli occhi
+   * colore della pelle
+   */
+  skin_colors: string;
+
+  /**
+   * colore degli occhi
    */
   eye_colors: string;
   /**
-   * colore die capelli
+   * colore dei capelli
    */
   hair_colors: string;
 
@@ -71,10 +76,6 @@ export class Specie extends Base {
    */
 
   filmsObj: Film[];
-  /**
-   * colore della pelle
-   */
-  skin_colors: string;
 }
 
 export const SpecieFields = [

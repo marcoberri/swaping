@@ -13,6 +13,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ItemListPeopleComponent } from './components/item-list-people/item-list-people.component';
 import { ItemListPlanetComponent } from './components/item-list-planet/item-list-planet.component';
 import { ItemListFilmComponent } from './components/item-list-film/item-list-film.component';
+import { ItemListSpecieComponent } from './components/item-list-specie/item-list-specie.component';
 import { ItemDetailsComponent } from './components/item-details/item-details.component';
 
 // Principale
@@ -29,6 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ItemListPeopleComponent,
     ItemListFilmComponent,
     ItemListPlanetComponent,
+    ItemListSpecieComponent,
     ItemDetailsComponent
   ],
   imports: [

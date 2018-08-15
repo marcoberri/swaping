@@ -6,41 +6,45 @@
         Name
       </th>
 
-      <th>
-        Climate
+      <th style="width: 80px;">
+        Average height
       </th>
 
       <th style="width: 80px;">
-        Diameter
+        Average lifespan
       </th>
 
       <th>
-        Gravity
+        Classification
       </th>
 
       <th style="width: 80px;">
-        Orbital Period
-      </th>
-
-      <th>
-        Population
+        Designation
       </th>
 
       <th style="width: 80px;">
-        Rotation
+        skin colors
       </th>
 
       <th style="width: 80px;">
-        Surface Water
+        eye colors
+      </th>
+
+      <th style="width: 80px;">
+        hair colors
       </th>
 
       <th>
-        Terrain
+        Homeworld
       </th>
 
 
       <th>
-        Residents
+        Language
+      </th>
+
+      <th>
+        People
       </th>
 
       <th>
@@ -56,54 +60,58 @@
         {{item.name}}
 
       </td>
-      <td>
+      <td class="center">
 
-        {{item.climate}}
+        {{item.average_height}}
 
       </td>
 
       <td class="center">
 
-        {{item.diameter}}
+        {{item.average_lifespan}}
 
       </td>
 
       <td class="center">
 
-        {{item.gravity}}
+        {{item.classification}}
 
       </td>
 
       <td class="center">
 
-        {{item.orbital_period}}
+        {{item.designation}}
 
       </td>
 
       <td class="center">
 
-        {{item.population}}
+        {{item.skin_colors}}
 
       </td>
 
       <td class="center">
-        {{item.rotation_period}}
+        {{item.eye_colors}}
 
       </td>
 
       <td class="center">
-        {{item.surface_water}}
+        {{item.hair_colors}}
 
       </td>
 
-      <td>
-        {{item.terrain}}
+      <td class="center">
+        {{item.homeworlObj?.name}}
+      </td>
+
+      <td class="center">
+        {{item.language}}
       </td>
 
       <td>
 
         <ul>
-          <li *ngFor="let ss of item.residentsObj">
+          <li *ngFor="let ss of item.peoplesObj">
             <a class="pointer" (click)="displayModalPannel(ss,'people')">{{ss.name}}</a>
           </li>
         </ul>

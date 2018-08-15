@@ -37,29 +37,36 @@
     <tr>
       <td class="{{item.gender}}">
 
-        {{item.name}}
+        <span class="main">
+          {{item.name}}
+        </span>
         <ul class="nobullet">
           <li *ngFor="let ss of item.speciesObj">
-            species: {{ss.name}}
+
+            <a class="pointer" (click)="displayModalPannel(ss,'specie')">
+              <img src="/assets/i.png">{{ss.name}}</a>
           </li>
-          <li *ngIf="item.homeworldObj">home: {{item.homeworldObj.name}}</li>
+          <li *ngIf="item.homeworldObj">
+            <a class="pointer" (click)="displayModalPannel(item.homeworldObj,'planet')">
+              <img src="/assets/i.png">{{item.homeworldObj.name}}</a>
+          </li>
         </ul>
 
       </td>
-      <td>
+      <td class="center">
         {{item.height}}
       </td>
-      <td>
+      <td class="center">
         {{item.hair_color}}
       </td>
-      <td>
+      <td class="center">
         {{item.skin_color}}
       </td>
-      <td>
+      <td class="center">
         {{item.eye_color}}
       </td>
 
-      <td style="font-size: 0.9em">
+      <td class="center" style="font-size: 0.9em">
         {{item.birth_year}}
       </td>
 
