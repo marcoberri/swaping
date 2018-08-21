@@ -65,10 +65,8 @@ export class DashboardComponent implements OnInit {
    */
   private loadMain() {
     this.apiService.getUrl().then(data => {
-      console.log(data);
       this.loadData = data;
       this.keys = Object.keys(data);
-      console.log(this.keys);
     });
   }
 }

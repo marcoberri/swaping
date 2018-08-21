@@ -1,6 +1,5 @@
 <p-table [value]="loadData" [totalRecords]="totalRecords" [paginator]="true" [rows]="10" [loading]="loading" [lazy]="true"
   (onLazyLoad)="loadDataAndConfigureTable($event)" [paginator]="true">
-
   <ng-template pTemplate="caption">
 
     <div class="ui-g">
@@ -16,31 +15,43 @@
     </div>
 
   </ng-template>
+
   <ng-template pTemplate="header">
-    <tr style="font-size: 0.9em">
+    <tr>
       <th>
         Name
       </th>
-      <th style="width:60px;">
-        Height
+
+      <th>
+        Model
       </th>
-      <th style="width:80px;">
-        Hair Color
+
+      <th>
+        Class
       </th>
-      <th style="width:90px;">
-        Skin Color
+
+      <th>
+        Cargo Capacity
       </th>
-      <th style="width:80px;">
-        Eye Color
+
+      <th>
+        Cost in credits
       </th>
-      <th style="width:80px;">
-        Birth Year
+      <th>Crew</th>
+
+      <th>
+        Consumables
+      </th>
+
+      <th>
+        Length
+      </th>
+
+      <th>
+        Max atmosphering speed
       </th>
       <th>
-        Starship
-      </th>
-      <th>
-        Veichles
+        Pilots
       </th>
 
       <th>
@@ -51,60 +62,69 @@
   </ng-template>
   <ng-template pTemplate="body" let-item>
     <tr>
-      <td class="{{item.gender}}">
+      <td class="main">
 
-        <span class="main">
-          {{item.name}}
-        </span>
-        <ul class="nobullet">
-          <li *ngFor="let ss of item.speciesObj">
+        {{item.name}}
 
-            <a class="pointer" (click)="displayModalPannel(ss,'specie')">
-              <img src="/assets/i.png">{{ss.name}}</a>
-          </li>
-          <li *ngIf="item.homeworldObj">
-            <a class="pointer" (click)="displayModalPannel(item.homeworldObj,'planet')">
-              <img src="/assets/i.png">{{item.homeworldObj.name}}</a>
-          </li>
-        </ul>
+      </td>
+
+      <td class="center">
+
+        {{item.model}}
+
+      </td>
+
+      <td class="center">
+
+        {{item.vehicle_class}}
+
+      </td>
+
+      <td class="center" style="width: 80px;">
+
+        {{item.cargo_capacity}}
+
+      </td>
+
+      <td class="center">
+
+        {{item.cost_in_credits}}
+
+      </td>
+      <td class="center" style="width: 80px;">
+
+        {{item.crew}}
 
       </td>
       <td class="center">
-        {{item.height}}
-      </td>
-      <td class="center">
-        {{item.hair_color}}
-      </td>
-      <td class="center">
-        {{item.skin_color}}
-      </td>
-      <td class="center">
-        {{item.eye_color}}
+
+        {{item.consumables}}
+
       </td>
 
-      <td class="center" style="font-size: 0.9em">
-        {{item.birth_year}}
+      <td class="center" style="width: 80px;">
+
+        {{item.length}}
+
+      </td>
+
+      <td class="center">
+
+        {{item.max_atmosphering_speed}}
+
       </td>
 
       <td>
 
         <ul>
-          <li *ngFor="let ss of item.starshipsObj">
-            <a class="pointer" (click)="displayModalPannel(ss,'starship')">{{ss.name}}</a>
+          <li *ngFor="let ss of item.pilotsObj">
+            <a class="pointer" (click)="displayModalPannel(ss,'people')">{{ss.name}}</a>
           </li>
         </ul>
 
       </td>
 
-      <td>
 
-        <ul>
-          <li *ngFor="let ss of item.vehiclesObj">
-            <a class="pointer" (click)="displayModalPannel(ss,'veichle')">{{ss.name}}</a>
-          </li>
-        </ul>
-
-      </td>
 
 
       <td>

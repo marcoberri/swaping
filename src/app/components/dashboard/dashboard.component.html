@@ -7,7 +7,8 @@
   </div>
   <div class="ui-g-8">
     <span *ngFor="let key of keys" style="float:left;margin-left:30px;">
-      <p-button label="{{key}}" (click)="onClickNavigateList(key)" styleClass="ui-button-rounded ui-button-warning"></p-button>
+      <button pButton type="button" label="{{key}}" class="ui-button-warning" (click)="onClickNavigateList(key)"></button>
+
     </span>
   </div>
   <div class="ui-g-2">

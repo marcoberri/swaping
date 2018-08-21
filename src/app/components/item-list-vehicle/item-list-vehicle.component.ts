@@ -1,19 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../../services/api.service';
 import { LazyLoadEvent } from 'primeng/primeng';
-import { Planet } from '../../models/planet.model';
+import { Vehicle } from '../../models/Vehicle.model';
 import { ItemListBase } from '../item-list-base';
 
 @Component({
-  selector: 'app-item-list-planet',
-  templateUrl: './item-list-planet.component.html',
-  styleUrls: ['./item-list-planet.component.css']
+  selector: 'app-item-list-vehicle',
+  templateUrl: './item-list-vehicle.component.html',
+  styleUrls: ['./item-list-vehicle.component.css']
 })
-export class ItemListPlanetComponent extends ItemListBase {
-  public loadData: Planet[];
-  public mainUrl = 'planets';
-
+export class ItemListVehicleComponent extends ItemListBase {
+  public loadData: Vehicle[];
+  public mainUrl = 'vehicles';
   /**
    *Aggancio un observer ai paramtri ricevuti in path, ogni volta che cambiano effettuo un caricamento diverso per la prima pagina almeno
    * @param {ApiService} apiService

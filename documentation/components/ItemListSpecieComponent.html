@@ -437,7 +437,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>ItemDetailsComponent</li>
+  <li>ItemListSpecieComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -460,17 +460,17 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/components/item-details/item-details.component.ts</code>
+    <code>src/app/components/item-list-specie/item-list-specie.component.ts</code>
 </p>
 
 
+    <p class="comment">
+        <h3>Extends</h3>
+    </p>
+    <p class="comment">
+            <code><a href="../classes/ItemListBase.html" target="_self" >ItemListBase</a></code>
+    </p>
 
-    <p class="comment">
-        <h3>Implements</h3>
-    </p>
-    <p class="comment">
-                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
-    </p>
 
 
 <section>
@@ -490,19 +490,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-item-details</code></td>
+                <td class="col-md-9"><code>app-item-list-specie</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>item-details.component.css</code></td>
+                <td class="col-md-9"><code>item-list-specie.component.css</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./item-details.component.html</code></td>
+                <td class="col-md-9"><code>./item-list-specie.component.html</code></td>
             </tr>
 
 
@@ -524,7 +524,39 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
+                                <a href="#loadData">loadData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#mainUrl">mainUrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#currentPage">currentPage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#customFields">customFields</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#displayModalDetail">displayModalDetail</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#loading">loading</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#modalItem">modalItem</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#modalType">modalType</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#totalRecords">totalRecords</a>
                             </li>
                         </ul>
                     </td>
@@ -539,51 +571,22 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#ngOnInit">ngOnInit</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#loadDataAndConfigureTable">loadDataAndConfigureTable</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#onHideModal">onHideModal</a>
+                                <a href="#displayModalPannel">displayModalPannel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#resetModal">resetModal</a>
                             </li>
                         </ul>
                     </td>
                 </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Inputs</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#displayModal">displayModal</a>
-                            </li>
-                            <li>
-                                <a href="#modalItem">modalItem</a>
-                            </li>
-                            <li>
-                                <a href="#objecttype">objecttype</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Outputs</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#onChiudi">onChiudi</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
 
 
 
@@ -602,12 +605,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/components/item-details/item-details.component.ts:61</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/item-list-specie/item-list-specie.component.ts:15</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Aggancio un observer ai paramtri ricevuti in path, ogni volta che cambiano effettuo un caricamento diverso per la prima pagina almeno</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -652,86 +657,8 @@
         </table>
 </section>
 
-    <section>
-    <h3 id="inputs">Inputs</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-2">
-                        <a name="displayModal"></a>
-                        <code>displayModal</code>
-                    </td>
-                    <td class="col-md-10">
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/components/item-details/item-details.component.ts:23</a></div>
-                            </td>
-                        </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-2">
-                        <a name="modalItem"></a>
-                        <code>modalItem</code>
-                    </td>
-                    <td class="col-md-10">
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/item-details/item-details.component.ts:26</a></div>
-                            </td>
-                        </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-2">
-                        <a name="objecttype"></a>
-                        <code>objecttype</code>
-                    </td>
-                    <td class="col-md-10">
-                            <p>
-                            <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
-                            </p>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/item-details/item-details.component.ts:29</a></div>
-                            </td>
-                        </tr>
-            </tbody>
-        </table>
-</section>
-    <section>
-    <h3 id="outputs">Outputs</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-2">
-                        <a name="onChiudi"></a>
-                        <code>onChiudi</code>
-                    </td>
-                    <td class="col-md-10">
-                        <em><code>$event</code> type:</em>    <code>EventEmitter&lt;any&gt;</code>
 
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/item-details/item-details.component.ts:20</a></div>
-                            </td>
-                        </tr>
-            </tbody>
-        </table>
-</section>
 
 
     <section>
@@ -743,71 +670,35 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="ngOnInit"></a>
-                        <span class="name">
-                            <b>
-                            ngOnInit
-                            </b>
-                            <a href="#ngOnInit"><span class="fa fa-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-<code>ngOnInit()</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/components/item-details/item-details.component.ts:65</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="onHideModal"></a>
+                        <a name="loadDataAndConfigureTable"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            onHideModal
+                            loadDataAndConfigureTable
                             </b>
-                            <a href="#onHideModal"><span class="fa fa-link"></span></a>
+                            <a href="#loadDataAndConfigureTable"><span class="fa fa-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
                             <span class="modifier-icon fa fa-reset"></span>
-                        <code>onHideModal(event: <a href="https://angular.io/api/router/Event" target="_blank">Event</a>)</code>
+                        <code>loadDataAndConfigureTable(event: LazyLoadEvent)</code>
                     </td>
                 </tr>
 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/components/item-details/item-details.component.ts:67</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/item-list-specie/item-list-specie.component.ts:32</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Caricamento e configurazione tabella principale</p>
+</div>
 
                             <div class="io-description">
                                     <b>Parameters :</b>
@@ -822,6 +713,176 @@
                                         <tbody>
                                                 <tr>
                                                         <td>event</td>
+                                                        <td>
+                                                                    <code>LazyLoadEvent</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            no
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayModalPannel"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            displayModalPannel
+                            </b>
+                            <a href="#displayModalPannel"><span class="fa fa-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon fa fa-reset"></span>
+                        <code>displayModalPannel(item: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, type: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Inherited from     <code><a href="../classes/ItemListBase.html" target="_self" >ItemListBase</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in ItemListBase:29</div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Visualizza la modale con le info dell&#39;object richiesto</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>item</td>
+                                                        <td>
+                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            no
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>type</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            no
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="resetModal"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            resetModal
+                            </b>
+                            <a href="#resetModal"><span class="fa fa-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon fa fa-reset"></span>
+                        <code>resetModal(Event: <a href="https://angular.io/api/router/Event" target="_blank">Event</a>)</code>
+                    </td>
+                </tr>
+
+
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Inherited from     <code><a href="../classes/ItemListBase.html" target="_self" >ItemListBase</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in ItemListBase:17</div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Reseta la modal sull&#39;evento di chiusura dello stesso</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>Event</td>
                                                         <td>
                                                                     <code><a href="https://angular.io/api/router/Event" target="_blank" >Event</a></code>
                                                         </td>
@@ -859,6 +920,127 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="loadData"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            loadData
+                            </b>
+                            <a href="#loadData"><span class="fa fa-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon fa fa-reset"></span><code>loadData:     <code><a href="../classes/Specie.html" target="_self" >Specie[]</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/Specie.html" target="_self" >Specie[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/components/item-list-specie/item-list-specie.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="mainUrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            mainUrl
+                            </b>
+                            <a href="#mainUrl"><span class="fa fa-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon fa fa-reset"></span><code>mainUrl:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;species&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/components/item-list-specie/item-list-specie.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currentPage"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            currentPage
+                            </b>
+                            <a href="#currentPage"><span class="fa fa-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon fa fa-reset"></span><code>currentPage:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>1</code>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Inherited from     <code><a href="../classes/ItemListBase.html" target="_self" >ItemListBase</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in ItemListBase:4</div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="customFields"></a>
                         <span class="name">
                             <b>
@@ -875,9 +1057,212 @@
 </code>
                     </td>
                 </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Inherited from     <code><a href="../classes/ItemListBase.html" target="_self" >ItemListBase</a></code>
+</div>
+                                </td>
+                            </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/item-details/item-details.component.ts:16</a></div>
+                                    <div class="io-line">Defined in ItemListBase:6</div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayModalDetail"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            displayModalDetail
+                            </b>
+                            <a href="#displayModalDetail"><span class="fa fa-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon fa fa-reset"></span><code>displayModalDetail:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Inherited from     <code><a href="../classes/ItemListBase.html" target="_self" >ItemListBase</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in ItemListBase:9</div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loading"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            loading
+                            </b>
+                            <a href="#loading"><span class="fa fa-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon fa fa-reset"></span><code>loading:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Inherited from     <code><a href="../classes/ItemListBase.html" target="_self" >ItemListBase</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in ItemListBase:3</div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="modalItem"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            modalItem
+                            </b>
+                            <a href="#modalItem"><span class="fa fa-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon fa fa-reset"></span><code>modalItem:     <code></code>
+</code>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Inherited from     <code><a href="../classes/ItemListBase.html" target="_self" >ItemListBase</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in ItemListBase:8</div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="modalType"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            modalType
+                            </b>
+                            <a href="#modalType"><span class="fa fa-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon fa fa-reset"></span><code>modalType:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Inherited from     <code><a href="../classes/ItemListBase.html" target="_self" >ItemListBase</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in ItemListBase:10</div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="totalRecords"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            totalRecords
+                            </b>
+                            <a href="#totalRecords"><span class="fa fa-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon fa fa-reset"></span><code>totalRecords:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Inherited from     <code><a href="../classes/ItemListBase.html" target="_self" >ItemListBase</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in ItemListBase:2</div>
                             </td>
                         </tr>
 
@@ -886,174 +1271,205 @@
         </table>
 </section>
 
-    <section>
-    <h3 id="accessors">
-        Accessors
-    </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="objecttype"></a>
-                        <span class="name"><b>objecttype</b><a href="#objecttype"><span class="fa fa-link"></span></a></span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <span class="accessor"><b>get</b><code>objecttype()</code></span>
-                    </td>
-                </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/components/item-details/item-details.component.ts:58</a></div>
-                                </td>
-                            </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <span class="accessor"><b>set</b><code>objecttype(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code></span>
-                    </td>
-                </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/item-details/item-details.component.ts:29</a></div>
-                                </td>
-                            </tr>
-                    <tr>
-                        <td class="col-md-4">
-
-                                <div class="io-description">
-                                        <b>Parameters :</b>
-                                        <table class="params">
-                                            <thead>
-                                                <tr>
-                                                    <td>Name</td>
-                                                        <td>Type</td>
-                                                    <td>Optional</td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                    <tr>
-                                                            <td>value</td>
-                                                    
-                                                            <td>
-                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                                            </td>
-                                                    
-                                                        <td>
-                                                                no
-                                                        </td>
-                                                        
-                                                    </tr>
-                                            </tbody>
-                                        </table>
-                                </div>
-                                <div>
-                                </div>
-                                <div class="io-description">
-                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                                </div>
-                        </td>
-                    </tr>
-            </tbody>
-        </table>
-</section>
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input, EventEmitter, Output } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
 import { ActivatedRoute } from &#x27;@angular/router&#x27;;
 import { ApiService } from &#x27;../../services/api.service&#x27;;
-import { StartShipFields } from &#x27;../../models/starship.model&#x27;;
-import { VehicleFields } from &#x27;../../models/vehicle.model&#x27;;
-import { PlanetFields } from &#x27;../../models/planet.model&#x27;;
-import { FilmFields } from &#x27;../../models/film.model&#x27;;
-import { PeopleFields } from &#x27;../../models/people.model&#x27;;
-import { SpecieFields } from &#x27;../../models/specie.model&#x27;;
+import { LazyLoadEvent } from &#x27;primeng/primeng&#x27;;
+import { Specie } from &#x27;../../models/specie.model&#x27;;
+import { ItemListBase } from &#x27;../item-list-base&#x27;;
+
 @Component({
-  selector: &#x27;app-item-details&#x27;,
-  templateUrl: &#x27;./item-details.component.html&#x27;,
-  styleUrls: [&#x27;./item-details.component.css&#x27;]
+  selector: &#x27;app-item-list-specie&#x27;,
+  templateUrl: &#x27;./item-list-specie.component.html&#x27;,
+  styleUrls: [&#x27;./item-list-specie.component.css&#x27;]
 })
-export class ItemDetailsComponent implements OnInit {
-  public customFields;
-
-  // tslint:disable-next-line:no-output-on-prefix
-  @Output()
-  public onChiudi: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
-
-  @Input()
-  public displayModal;
-
-  @Input()
-  public modalItem;
-
-  @Input()
-  set objecttype(value: string) {
-    if (!value) {
-      return;
-    }
-    switch (value) {
-      case &#x27;starship&#x27;:
-        this.customFields &#x3D; StartShipFields;
-        break;
-      case &#x27;veichle&#x27;:
-        this.customFields &#x3D; VehicleFields;
-        break;
-      case &#x27;film&#x27;:
-        this.customFields &#x3D; FilmFields;
-        break;
-      case &#x27;people&#x27;:
-        this.customFields &#x3D; PeopleFields;
-        break;
-      case &#x27;planet&#x27;:
-        this.customFields &#x3D; PlanetFields;
-        break;
-      case &#x27;specie&#x27;:
-        this.customFields &#x3D; SpecieFields;
-        break;
-      default:
-        console.log(&#x27;Spiacenti, non abbiamo &#x27; + value);
-    }
-    this.displayModal &#x3D; true;
+export class ItemListSpecieComponent extends ItemListBase {
+  public loadData: Specie[];
+  public mainUrl &#x3D; &#x27;species&#x27;;
+  /**
+   *Aggancio un observer ai paramtri ricevuti in path, ogni volta che cambiano effettuo un caricamento diverso per la prima pagina almeno
+   * @param {ApiService} apiService
+   * @param {ActivatedRoute} route
+   * @memberof ItemListComponent
+   */
+  constructor(private apiService: ApiService, private route: ActivatedRoute) {
+    super();
   }
 
-  get objecttype(): string {
-    // transform value for display
-    return &#x27;null&#x27;;
-  }
+  /**
+   *Caricamento e configurazione tabella principale
+   *
+   * @public
+   * @memberof ItemListComponent
+   */
+  public loadDataAndConfigureTable(event: LazyLoadEvent) {
+    this.currentPage &#x3D; event.first / event.rows;
+    if (this.currentPage &#x3D;&#x3D;&#x3D; 0) {
+      this.currentPage &#x3D; 1;
+    } else {
+      this.currentPage++;
+    }
+    this.loading &#x3D; true;
+    this.apiService.getUrlPages(this.currentPage, this.mainUrl).then(data &#x3D;&gt; {
+      data.results.forEach(d &#x3D;&gt; this.apiService.elaborateLookup(d));
 
-  constructor(private apiService: ApiService, private route: ActivatedRoute) {}
+      this.loadData &#x3D; data.results;
 
-  ngOnInit() {}
-
-  public onHideModal(event: Event) {
-    this.displayModal &#x3D; false;
-
-    this.modalItem &#x3D; null;
-    this.onChiudi.emit(null);
+      this.totalRecords &#x3D; data.count;
+      this.loading &#x3D; false;
+    });
   }
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p-dialog (onHide)&#x3D;&quot;onHideModal($event)&quot; header&#x3D;&quot;{{modalItem?.name}}{{modalItem?.title}}&quot; [(visible)]&#x3D;&quot;displayModal&quot; [width]&#x3D;&quot;500&quot;
-  [modal]&#x3D;&quot;true&quot; *ngIf&#x3D;&quot;modalItem&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;p-table [value]&#x3D;&quot;loadData&quot; [totalRecords]&#x3D;&quot;totalRecords&quot; [paginator]&#x3D;&quot;true&quot; [rows]&#x3D;&quot;10&quot; [loading]&#x3D;&quot;loading&quot; [lazy]&#x3D;&quot;true&quot;
+  (onLazyLoad)&#x3D;&quot;loadDataAndConfigureTable($event)&quot; [paginator]&#x3D;&quot;true&quot;&gt;
 
-  &lt;p-table [value]&#x3D;&quot;customFields&quot;&gt;
-    &lt;ng-template pTemplate&#x3D;&quot;body&quot; let-item&gt;
-      &lt;tr&gt;
-        &lt;td&gt;{{item.label}}&lt;/td&gt;
-        &lt;td&gt;{{modalItem[item.field]}}&lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/ng-template&gt;
+  &lt;ng-template pTemplate&#x3D;&quot;caption&quot;&gt;
+    &lt;span style&#x3D;&quot;text-transform: uppercase; font-size:2em;&quot;&gt;{{mainUrl}}&lt;/span&gt;
+  &lt;/ng-template&gt;
 
-  &lt;/p-table&gt;
-&lt;/p-dialog&gt;
+  &lt;ng-template pTemplate&#x3D;&quot;header&quot;&gt;
+    &lt;tr&gt;
+      &lt;th&gt;
+        Name
+      &lt;/th&gt;
+
+      &lt;th style&#x3D;&quot;width: 80px;&quot;&gt;
+        Average height
+      &lt;/th&gt;
+
+      &lt;th style&#x3D;&quot;width: 80px;&quot;&gt;
+        Average lifespan
+      &lt;/th&gt;
+
+      &lt;th&gt;
+        Classification
+      &lt;/th&gt;
+
+      &lt;th style&#x3D;&quot;width: 80px;&quot;&gt;
+        Designation
+      &lt;/th&gt;
+
+      &lt;th style&#x3D;&quot;width: 80px;&quot;&gt;
+        skin colors
+      &lt;/th&gt;
+
+      &lt;th style&#x3D;&quot;width: 80px;&quot;&gt;
+        eye colors
+      &lt;/th&gt;
+
+      &lt;th style&#x3D;&quot;width: 80px;&quot;&gt;
+        hair colors
+      &lt;/th&gt;
+
+      &lt;th&gt;
+        Homeworld
+      &lt;/th&gt;
+
+
+      &lt;th&gt;
+        Language
+      &lt;/th&gt;
+
+      &lt;th&gt;
+        People
+      &lt;/th&gt;
+
+      &lt;th&gt;
+        Film
+      &lt;/th&gt;
+
+    &lt;/tr&gt;
+  &lt;/ng-template&gt;
+  &lt;ng-template pTemplate&#x3D;&quot;body&quot; let-item&gt;
+    &lt;tr&gt;
+      &lt;td class&#x3D;&quot;main&quot;&gt;
+
+        {{item.name}}
+
+      &lt;/td&gt;
+      &lt;td class&#x3D;&quot;center&quot;&gt;
+
+        {{item.average_height}}
+
+      &lt;/td&gt;
+
+      &lt;td class&#x3D;&quot;center&quot;&gt;
+
+        {{item.average_lifespan}}
+
+      &lt;/td&gt;
+
+      &lt;td class&#x3D;&quot;center&quot;&gt;
+
+        {{item.classification}}
+
+      &lt;/td&gt;
+
+      &lt;td class&#x3D;&quot;center&quot;&gt;
+
+        {{item.designation}}
+
+      &lt;/td&gt;
+
+      &lt;td class&#x3D;&quot;center&quot;&gt;
+
+        {{item.skin_colors}}
+
+      &lt;/td&gt;
+
+      &lt;td class&#x3D;&quot;center&quot;&gt;
+        {{item.eye_colors}}
+
+      &lt;/td&gt;
+
+      &lt;td class&#x3D;&quot;center&quot;&gt;
+        {{item.hair_colors}}
+
+      &lt;/td&gt;
+
+      &lt;td class&#x3D;&quot;center&quot;&gt;
+        &lt;a class&#x3D;&quot;pointer&quot; (click)&#x3D;&quot;displayModalPannel(item.homeworldObj,&#x27;planet&#x27;)&quot;&gt;{{item.homeworldObj?.name}}&lt;/a&gt;
+      &lt;/td&gt;
+
+      &lt;td class&#x3D;&quot;center&quot;&gt;
+        {{item.language}}
+      &lt;/td&gt;
+
+      &lt;td&gt;
+
+        &lt;ul&gt;
+          &lt;li *ngFor&#x3D;&quot;let ss of item.peoplesObj&quot;&gt;
+            &lt;a class&#x3D;&quot;pointer&quot; (click)&#x3D;&quot;displayModalPannel(ss,&#x27;people&#x27;)&quot;&gt;{{ss.name}}&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+
+      &lt;/td&gt;
+
+
+      &lt;td&gt;
+
+        &lt;ul&gt;
+          &lt;li *ngFor&#x3D;&quot;let ss of item.filmsObj&quot;&gt;
+            &lt;a class&#x3D;&quot;pointer&quot; (click)&#x3D;&quot;displayModalPannel(ss,&#x27;film&#x27;)&quot;&gt;{{ss.title}}&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+
+      &lt;/td&gt;
+
+    &lt;/tr&gt;
+  &lt;/ng-template&gt;
+&lt;/p-table&gt;
+
+
+&lt;app-item-details (onChiudi)&#x3D;&quot;resetModal($event)&quot; [objecttype]&#x3D;&quot;modalType&quot; [modalItem]&#x3D;&quot;modalItem&quot; [displayModal]&#x3D;&quot;displayModalDetail&quot;&gt;&lt;/app-item-details&gt;
 </code></pre>
     </div>
 
@@ -1082,10 +1498,10 @@ export class ItemDetailsComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p-dialog (onHide)="onHideModal($event)" header="{{modalItem?.name}}{{modalItem?.title}}" [(visible)]="displayModal" [width]="500"  [modal]="true" *ngIf="modalItem">  <p-table [value]="customFields">    <ng-template pTemplate="body" let-item>      <tr>        <td>{{item.label}}</td>        <td>{{modalItem[item.field]}}</td>      </tr>    </ng-template>  </p-table></p-dialog></div>'
+        var COMPONENT_TEMPLATE = '<div><p-table [value]="loadData" [totalRecords]="totalRecords" [paginator]="true" [rows]="10" [loading]="loading" [lazy]="true"  (onLazyLoad)="loadDataAndConfigureTable($event)" [paginator]="true">  <ng-template pTemplate="caption">    <span style="text-transform: uppercase; font-size:2em;">{{mainUrl}}</span>  </ng-template>  <ng-template pTemplate="header">    <tr>      <th>        Name      </th>      <th style="width: 80px;">        Average height      </th>      <th style="width: 80px;">        Average lifespan      </th>      <th>        Classification      </th>      <th style="width: 80px;">        Designation      </th>      <th style="width: 80px;">        skin colors      </th>      <th style="width: 80px;">        eye colors      </th>      <th style="width: 80px;">        hair colors      </th>      <th>        Homeworld      </th>      <th>        Language      </th>      <th>        People      </th>      <th>        Film      </th>    </tr>  </ng-template>  <ng-template pTemplate="body" let-item>    <tr>      <td class="main">        {{item.name}}      </td>      <td class="center">        {{item.average_height}}      </td>      <td class="center">        {{item.average_lifespan}}      </td>      <td class="center">        {{item.classification}}      </td>      <td class="center">        {{item.designation}}      </td>      <td class="center">        {{item.skin_colors}}      </td>      <td class="center">        {{item.eye_colors}}      </td>      <td class="center">        {{item.hair_colors}}      </td>      <td class="center">        <a class="pointer" (click)="displayModalPannel(item.homeworldObj,\'planet\')">{{item.homeworldObj?.name}}</a>      </td>      <td class="center">        {{item.language}}      </td>      <td>        <ul>          <li *ngFor="let ss of item.peoplesObj">            <a class="pointer" (click)="displayModalPannel(ss,\'people\')">{{ss.name}}</a>          </li>        </ul>      </td>      <td>        <ul>          <li *ngFor="let ss of item.filmsObj">            <a class="pointer" (click)="displayModalPannel(ss,\'film\')">{{ss.title}}</a>          </li>        </ul>      </td>    </tr>  </ng-template></p-table><app-item-details (onChiudi)="resetModal($event)" [objecttype]="modalType" [modalItem]="modalItem" [displayModal]="displayModalDetail"></app-item-details></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'ItemDetailsComponent', 'selector': 'app-item-details'},{'name': 'ItemListFilmComponent', 'selector': 'app-item-list-film'},{'name': 'ItemListPeopleComponent', 'selector': 'app-item-list-people'},{'name': 'ItemListPlanetComponent', 'selector': 'app-item-list-planet'},{'name': 'ItemListSpecieComponent', 'selector': 'app-item-list-specie'},{'name': 'ItemListStarshipComponent', 'selector': 'app-item-list-starship'},{'name': 'ItemListVehicleComponent', 'selector': 'app-item-list-vehicle'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'ItemDetailsComponent'};
+    var ACTUAL_COMPONENT = {'name': 'ItemListSpecieComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -1125,7 +1541,7 @@ export class ItemDetailsComponent implements OnInit {
         <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'ItemDetailsComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'ItemListSpecieComponent.html';
         </script>
 
        <script src="../js/search/search.js"></script>

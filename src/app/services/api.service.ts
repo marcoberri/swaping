@@ -49,7 +49,8 @@ export class ApiService {
 
   /**
    *
-   * Verifica la presenza di un singolo valore in session storage, se non esiste esegue la chiamata
+   * Verifica la presenza di un singolo valore in session storage, 
+   * se non esiste esegue la chiamata
    *
    * @param {string} url
    * @returns {*}
@@ -107,7 +108,9 @@ export class ApiService {
     if (item.residents) {
       this.getLookUpList(item.residents, (item.residentsObj = []));
     }
-
+    if (item.pilots) {
+      this.getLookUpList(item.pilots, (item.pilotsObj = []));
+    }
     if (item.planets) {
       this.getLookUpList(item.planets, (item.planetsObj = []));
     }

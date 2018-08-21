@@ -1,12 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Prime ng
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
 import { TooltipModule } from 'primeng/tooltip';
+import { TabMenuModule } from 'primeng/tabmenu';
 
 // Componeti del mio progetto
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -15,13 +17,14 @@ import { ItemListPlanetComponent } from './components/item-list-planet/item-list
 import { ItemListFilmComponent } from './components/item-list-film/item-list-film.component';
 import { ItemListSpecieComponent } from './components/item-list-specie/item-list-specie.component';
 import { ItemDetailsComponent } from './components/item-details/item-details.component';
+import { ItemListVehicleComponent } from './components/item-list-vehicle/item-list-vehicle.component';
+import { ItemListStarshipComponent } from './components/item-list-starship/item-list-starship.component';
 
 // Principale
 import { AppComponent } from './app.component';
 
 // Routing
 import { routingModule } from './app.routing';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ItemListFilmComponent,
     ItemListPlanetComponent,
     ItemListSpecieComponent,
+    ItemListVehicleComponent,
+    ItemListStarshipComponent,
     ItemDetailsComponent
   ],
   imports: [
@@ -43,7 +48,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ButtonModule,
     TableModule,
     DialogModule,
-    TooltipModule
+    TooltipModule,
+    TabMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

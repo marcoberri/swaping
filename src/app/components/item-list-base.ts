@@ -4,6 +4,7 @@ export class ItemListBase {
   public currentPage = 1;
 
   public customFields;
+  public search: string = null;
 
   public modalItem;
   public displayModalDetail = false;
@@ -30,5 +31,9 @@ export class ItemListBase {
     this.displayModalDetail = true;
     this.modalItem = item;
     this.modalType = type;
+  }
+
+  public searchData(event) {
+    console.log('here:' + event);
   }
 }

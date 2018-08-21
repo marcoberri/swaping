@@ -10,10 +10,11 @@ Sample Angular Application for display http://swapi.co API.
 - Karma
 - e2e
 - sort table column
+- dinamic templateUrl to reduce component list
 
 ## Documentation
 
-Run compodoc -p tsconfig.json
+Run yarn compodoc
 
 ## Development server
 

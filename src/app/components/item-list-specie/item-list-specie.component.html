@@ -1,5 +1,23 @@
 <p-table [value]="loadData" [totalRecords]="totalRecords" [paginator]="true" [rows]="10" [loading]="loading" [lazy]="true"
   (onLazyLoad)="loadDataAndConfigureTable($event)" [paginator]="true">
+
+  <ng-template pTemplate="caption">
+
+    <div class="ui-g">
+      <div class="ui-g-2">
+
+      </div>
+      <div class="ui-g-8">
+        <span class="headerTable">{{mainUrl}}</span>
+
+      </div>
+      <div class="ui-g-2"></div>
+
+    </div>
+
+  </ng-template>
+
+
   <ng-template pTemplate="header">
     <tr>
       <th>
@@ -101,7 +119,7 @@
       </td>
 
       <td class="center">
-        {{item.homeworlObj?.name}}
+        <a class="pointer" (click)="displayModalPannel(item.homeworldObj,'planet')">{{item.homeworldObj?.name}}</a>
       </td>
 
       <td class="center">

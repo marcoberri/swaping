@@ -70,7 +70,7 @@ export const VehicleFields = [
   },
 
   {
-    label: 'Maxa atmosphering speed',
+    label: 'Max atmosphering speed',
     field: 'max_atmosphering_speed'
   },
 
