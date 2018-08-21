@@ -139,9 +139,6 @@
                         <a href="classes/ItemListBase.html" data-type="entity-link">ItemListBase</a>
                     </li>
                     <li class="link">
-                        <a href="classes/ItemListElement.html" data-type="entity-link">ItemListElement</a>
-                    </li>
-                    <li class="link">
                         <a href="classes/Macchine.html" data-type="entity-link">Macchine</a>
                     </li>
                     <li class="link">
@@ -344,9 +341,6 @@
                     </li>
                     <li class="link">
                         <a href="classes/ItemListBase.html" data-type="entity-link">ItemListBase</a>
-                    </li>
-                    <li class="link">
-                        <a href="classes/ItemListElement.html" data-type="entity-link">ItemListElement</a>
                     </li>
                     <li class="link">
                         <a href="classes/Macchine.html" data-type="entity-link">Macchine</a>
@@ -984,7 +978,8 @@ export class DashboardComponent implements OnInit {
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;ui-g-8&quot;&gt;
     &lt;span *ngFor&#x3D;&quot;let key of keys&quot; style&#x3D;&quot;float:left;margin-left:30px;&quot;&gt;
-      &lt;p-button label&#x3D;&quot;{{key}}&quot; (click)&#x3D;&quot;onClickNavigateList(key)&quot; styleClass&#x3D;&quot;ui-button-rounded ui-button-warning&quot;&gt;&lt;/p-button&gt;
+      &lt;button pButton type&#x3D;&quot;button&quot; label&#x3D;&quot;{{key}}&quot; class&#x3D;&quot;ui-button-warning&quot; (click)&#x3D;&quot;onClickNavigateList(key)&quot;&gt;&lt;/button&gt;
+
     &lt;/span&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;ui-g-2&quot;&gt;
@@ -996,7 +991,8 @@ export class DashboardComponent implements OnInit {
   &lt;div class&#x3D;&quot;ui-g-12&quot;&gt;
     &lt;router-outlet&gt;&lt;/router-outlet&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -1024,7 +1020,7 @@ export class DashboardComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="ui-g">  <div class="ui-g-2">    <a target="_new" href="https://commons.wikimedia.org/wiki/File:Star_Wars_Logo_2.svg#/media/File:Star_Wars_Logo_2.svg">      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Star_Wars_Logo_2.svg/100px-Star_Wars_Logo_2.svg.png"        alt="Star Wars Logo 2.svg">    </a>  </div>  <div class="ui-g-8">    <span *ngFor="let key of keys" style="float:left;margin-left:30px;">      <p-button label="{{key}}" (click)="onClickNavigateList(key)" styleClass="ui-button-rounded ui-button-warning"></p-button>    </span>  </div>  <div class="ui-g-2">    <a href="https://swapi.co" target="_new">      <img src="/assets/swapi.png" alt="API from swapi.co" height="60px;">    </a>  </div>  <div class="ui-g-12">    <router-outlet></router-outlet>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="ui-g">  <div class="ui-g-2">    <a target="_new" href="https://commons.wikimedia.org/wiki/File:Star_Wars_Logo_2.svg#/media/File:Star_Wars_Logo_2.svg">      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Star_Wars_Logo_2.svg/100px-Star_Wars_Logo_2.svg.png"        alt="Star Wars Logo 2.svg">    </a>  </div>  <div class="ui-g-8">    <span *ngFor="let key of keys" style="float:left;margin-left:30px;">      <button pButton type="button" label="{{key}}" class="ui-button-warning" (click)="onClickNavigateList(key)"></button>    </span>  </div>  <div class="ui-g-2">    <a href="https://swapi.co" target="_new">      <img src="/assets/swapi.png" alt="API from swapi.co" height="60px;">    </a>  </div>  <div class="ui-g-12">    <router-outlet></router-outlet>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'ItemDetailsComponent', 'selector': 'app-item-details'},{'name': 'ItemListFilmComponent', 'selector': 'app-item-list-film'},{'name': 'ItemListPeopleComponent', 'selector': 'app-item-list-people'},{'name': 'ItemListPlanetComponent', 'selector': 'app-item-list-planet'},{'name': 'ItemListSpecieComponent', 'selector': 'app-item-list-specie'},{'name': 'ItemListStarshipComponent', 'selector': 'app-item-list-starship'},{'name': 'ItemListVehicleComponent', 'selector': 'app-item-list-vehicle'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'DashboardComponent'};
