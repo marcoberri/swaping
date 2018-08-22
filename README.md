@@ -6,7 +6,7 @@ Sample Angular Application for display http://swapi.co API.
 - Cache lookup value in Session Storage see example:
 
 - Demo: http://swaping.marcoberri.it
-- Doc:
+- Doc: http://swaping.marcoberri.it/documentation/
 - GitHub : https://github.com/marcoberri/swaping
 
 ## TODO
