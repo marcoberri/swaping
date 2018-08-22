@@ -4,14 +4,31 @@ import { ApiService } from '../../services/api.service';
 import { LazyLoadEvent } from 'primeng/primeng';
 import { Film } from '../../models/film.model';
 import { ItemListBase } from '../item-list-base';
-
+/**
+ * Componente per la visualizzazione dell'elenco dei Film
+ *
+ * @export
+ * @class ItemListFilmComponent
+ * @extends {ItemListBase}
+ */
 @Component({
   selector: 'app-item-list-film',
   templateUrl: './item-list-film.component.html',
   styleUrls: ['./item-list-film.component.css']
 })
 export class ItemListFilmComponent extends ItemListBase {
+  /**
+   *Caricamento dei dati
+   *
+   * @type {Film[]}
+   * @memberof ItemListFilmComponent
+   */
   public loadData: Film[];
+  /**
+   *Url principale e titolo della pagina
+   *
+   * @memberof ItemListFilmComponent
+   */
   public mainUrl = 'films';
   /**
    *Aggancio un observer ai paramtri ricevuti in path, ogni volta che cambiano effettuo un caricamento diverso per la prima pagina almeno

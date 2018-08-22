@@ -3,7 +3,11 @@
 Sample Angular Application for display http://swapi.co API.
 
 - PrimeNG widget https://www.primefaces.org/primeng/
-- Cache lookup value in Session Storage
+- Cache lookup value in Session Storage see example:
+
+- Demo: http://swaping.marcoberri.it
+- Doc:
+- GitHub : https://github.com/marcoberri/swaping
 
 ## TODO
 

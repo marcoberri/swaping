@@ -4,14 +4,31 @@ import { ApiService } from '../../services/api.service';
 import { LazyLoadEvent } from 'primeng/primeng';
 import { Starship } from '../../models/starship.model';
 import { ItemListBase } from '../item-list-base';
-
+/**
+ * Gestione elenco delle starship
+ *
+ * @export
+ * @class ItemListStarshipComponent
+ * @extends {ItemListBase}
+ */
 @Component({
   selector: 'app-item-list-starship',
   templateUrl: './item-list-starship.component.html',
   styleUrls: ['./item-list-starship.component.css']
 })
 export class ItemListStarshipComponent extends ItemListBase {
+  /**
+   * Oggetti caricati
+   *
+   * @type {Starship[]}
+   * @memberof ItemListStarshipComponent
+   */
   public loadData: Starship[];
+  /**
+   * Url caricamento e titolo della pagina
+   *
+   * @memberof ItemListStarshipComponent
+   */
   public mainUrl = 'starships';
   /**
    *Aggancio un observer ai paramtri ricevuti in path, ogni volta che cambiano effettuo un caricamento diverso per la prima pagina almeno
@@ -39,9 +56,7 @@ export class ItemListStarshipComponent extends ItemListBase {
     this.loading = true;
     this.apiService.getUrlPages(this.currentPage, this.mainUrl).then(data => {
       data.results.forEach(d => this.apiService.elaborateLookup(d));
-
       this.loadData = data.results;
-
       this.totalRecords = data.count;
       this.loading = false;
     });

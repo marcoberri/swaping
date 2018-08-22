@@ -1,4 +1,18 @@
+/**
+ * Variabili global di configurazione
+ */
 export const environment = {
+  /**
+   * Production Mode
+   */
+
   production: false,
-  version: '20180815'
+  /**
+   * Version
+   */
+  version: '20180822 - dev',
+  /**
+   * Api url
+   */
+  url: 'https://swapi.co/api/'
 };

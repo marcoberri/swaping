@@ -74,14 +74,14 @@
                         <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                             <li class="chapter inner">
                                 <div class="simple menu-toggler" data-toggle="collapse"
-                                        data-target="#xs-components-links-module-AppModule-695a1bf8a2e3178364738f6eb5a6ed27"
+                                        data-target="#xs-components-links-module-AppModule-94c2c868fad4831defce48598b8ca1b6"
                                     >
                                     <span class="fa fa-fw fa-cogs"></span>
                                     <span>Components</span>
                                     <span class="fa fa-angle-down"></span>
                                 </div>
                                 <ul class="links collapse"
-                                        id="xs-components-links-module-AppModule-695a1bf8a2e3178364738f6eb5a6ed27"
+                                        id="xs-components-links-module-AppModule-94c2c868fad4831defce48598b8ca1b6"
                                     >
                                         <li class="link">
                                             <a href="components/AppComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppComponent</a>
@@ -278,14 +278,14 @@
                         <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                             <li class="chapter inner">
                                 <div class="simple menu-toggler" data-toggle="collapse"
-                                        data-target="#components-links-module-AppModule-695a1bf8a2e3178364738f6eb5a6ed27"
+                                        data-target="#components-links-module-AppModule-94c2c868fad4831defce48598b8ca1b6"
 >
                                     <span class="fa fa-fw fa-cogs"></span>
                                     <span>Components</span>
                                     <span class="fa fa-angle-down"></span>
                                 </div>
                                 <ul class="links collapse"
-                                        id="components-links-module-AppModule-695a1bf8a2e3178364738f6eb5a6ed27"
+                                        id="components-links-module-AppModule-94c2c868fad4831defce48598b8ca1b6"
 >
                                         <li class="link">
                                             <a href="components/AppComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppComponent</a>
@@ -457,6 +457,13 @@
     <code>src/app/components/dashboard/dashboard.component.ts</code>
 </p>
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Gestione della dashboard principale del sito</p>
+
+    </p>
 
 
     <p class="comment">
@@ -466,6 +473,11 @@
                 <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
     </p>
 
+    <p class="comment">
+        <h3>Example</h3>
+    </p>
+    <div class="io-description">
+    </div>
 
 <section>
     <h3>Metadata</h3>
@@ -570,7 +582,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:11</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -667,7 +679,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:66</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:72</a></div>
                             </td>
                         </tr>
 
@@ -707,7 +719,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:46</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:52</a></div>
                             </td>
                         </tr>
 
@@ -749,7 +761,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:56</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:62</a></div>
                             </td>
                         </tr>
 
@@ -833,7 +845,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:39</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:45</a></div>
                             </td>
                         </tr>
 
@@ -874,7 +886,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:31</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:37</a></div>
                             </td>
                         </tr>
 
@@ -897,7 +909,13 @@
 import { HttpClient } from &#x27;@angular/common/http&#x27;;
 import { Router } from &#x27;@angular/router&#x27;;
 import { ApiService } from &#x27;../../services/api.service&#x27;;
-
+/**
+ *Gestione della dashboard principale del sito
+ *
+ * @export
+ * @class DashboardComponent
+ * @implements {OnInit}
+ */
 @Component({
   selector: &#x27;app-dashboard&#x27;,
   templateUrl: &#x27;./dashboard.component.html&#x27;,

@@ -2,7 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ApiService } from '../../services/api.service';
-
+/**
+ *Gestione della dashboard principale del sito
+ *
+ * @export
+ * @class DashboardComponent
+ * @implements {OnInit}
+ */
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',

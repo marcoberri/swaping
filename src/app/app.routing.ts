@@ -12,7 +12,6 @@ import { ItemListStarshipComponent } from './components/item-list-starship/item-
  * Rotte di navigazione
  */
 const routes: Routes = [
-  // { path: '', component: DashboardComponent },
   { path: 'list/people', component: ItemListPeopleComponent },
   { path: 'list/planets', component: ItemListPlanetComponent },
   { path: 'list/films', component: ItemListFilmComponent },

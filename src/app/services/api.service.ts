@@ -2,7 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { People } from '../models/people.model';
 import { Page } from '../models/page.model';
-
+/**
+ * Servizio per la gestione delle chiamate alla API
+ *
+ * @export
+ * @class ApiService
+ */
 @Injectable({
   providedIn: 'root'
 })
@@ -15,8 +20,19 @@ export class ApiService {
    */
   private BASE_PATH = 'https://swapi.co/api/';
 
+  /**
+   * Creates an instance of ApiService.
+   * @param {HttpClient} httpClient
+   * @memberof ApiService
+   */
   constructor(private httpClient: HttpClient) {}
-
+  /**
+   * Efettua una chiamata
+   *
+   * @param {string} [url=null]
+   * @returns {Promise<any>}
+   * @memberof ApiService
+   */
   public getUrl(url: string = null): Promise<any> {
     return this.httpClient
       .get<any>(this.BASE_PATH + (url ? url : ''))
@@ -49,7 +65,7 @@ export class ApiService {
 
   /**
    *
-   * Verifica la presenza di un singolo valore in session storage, 
+   * Verifica la presenza di un singolo valore in session storage,
    * se non esiste esegue la chiamata
    *
    * @param {string} url
@@ -87,6 +103,13 @@ export class ApiService {
     });
   }
 
+  /**
+   *Elaborazione delle lookup, estrae i figli
+   *
+   * @param {*} item
+   * @returns
+   * @memberof ApiService
+   */
   public elaborateLookup(item: any) {
     if (!item) {
       return;

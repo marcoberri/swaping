@@ -4,14 +4,31 @@ import { ApiService } from '../../services/api.service';
 import { LazyLoadEvent } from 'primeng/primeng';
 import { Vehicle } from '../../models/Vehicle.model';
 import { ItemListBase } from '../item-list-base';
-
+/**
+ * Gestione della pagina dei veicoli
+ *
+ * @export
+ * @class ItemListVehicleComponent
+ * @extends {ItemListBase}
+ */
 @Component({
   selector: 'app-item-list-vehicle',
   templateUrl: './item-list-vehicle.component.html',
   styleUrls: ['./item-list-vehicle.component.css']
 })
 export class ItemListVehicleComponent extends ItemListBase {
+  /**
+   *Oggetti caricati
+   *
+   * @type {Vehicle[]}
+   * @memberof ItemListVehicleComponent
+   */
   public loadData: Vehicle[];
+  /**
+   * Url delle api e titolo della pagina
+   *
+   * @memberof ItemListVehicleComponent
+   */
   public mainUrl = 'vehicles';
   /**
    *Aggancio un observer ai paramtri ricevuti in path, ogni volta che cambiano effettuo un caricamento diverso per la prima pagina almeno
@@ -39,9 +56,7 @@ export class ItemListVehicleComponent extends ItemListBase {
     this.loading = true;
     this.apiService.getUrlPages(this.currentPage, this.mainUrl).then(data => {
       data.results.forEach(d => this.apiService.elaborateLookup(d));
-
       this.loadData = data.results;
-
       this.totalRecords = data.count;
       this.loading = false;
     });

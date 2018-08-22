@@ -34,7 +34,6 @@ export class Vehicle extends Macchine {
 /**
  * Mapping per la gestione delle lookup in visualizzazione su pop-up
  */
-
 export const VehicleFields = [
   {
     label: 'Name',

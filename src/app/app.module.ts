@@ -25,7 +25,12 @@ import { AppComponent } from './app.component';
 
 // Routing
 import { routingModule } from './app.routing';
-
+/**
+ * Gestione dei moduli importati
+ *
+ * @export
+ * @class AppModule
+ */
 @NgModule({
   declarations: [
     AppComponent,

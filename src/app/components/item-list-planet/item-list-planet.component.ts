@@ -4,14 +4,31 @@ import { ApiService } from '../../services/api.service';
 import { LazyLoadEvent } from 'primeng/primeng';
 import { Planet } from '../../models/planet.model';
 import { ItemListBase } from '../item-list-base';
-
+/**
+ * componente base per la visualizzazione dei pianeti
+ *
+ * @export
+ * @class ItemListPlanetComponent
+ * @extends {ItemListBase}
+ */
 @Component({
   selector: 'app-item-list-planet',
   templateUrl: './item-list-planet.component.html',
   styleUrls: ['./item-list-planet.component.css']
 })
 export class ItemListPlanetComponent extends ItemListBase {
+  /**
+   * Oggetti Caricati
+   *
+   * @type {Planet[]}
+   * @memberof ItemListPlanetComponent
+   */
   public loadData: Planet[];
+  /**
+   * Oggeto api chiamate e titolo della pagina
+   *
+   * @memberof ItemListPlanetComponent
+   */
   public mainUrl = 'planets';
 
   /**
@@ -40,9 +57,7 @@ export class ItemListPlanetComponent extends ItemListBase {
     this.loading = true;
     this.apiService.getUrlPages(this.currentPage, this.mainUrl).then(data => {
       data.results.forEach(d => this.apiService.elaborateLookup(d));
-
       this.loadData = data.results;
-
       this.totalRecords = data.count;
       this.loading = false;
     });
