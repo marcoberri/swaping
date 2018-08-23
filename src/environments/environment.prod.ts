@@ -10,7 +10,7 @@ export const environment = {
   /**
    * Version
    */
-  version: '20180822',
+  version: '20180823',
   /**
    * Api url
    */
