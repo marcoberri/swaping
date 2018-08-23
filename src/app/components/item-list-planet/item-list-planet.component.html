@@ -1,6 +1,5 @@
 <p-table [value]="loadData" [totalRecords]="totalRecords" [paginator]="true" [rows]="10" [loading]="loading" [lazy]="true"
-  (onLazyLoad)="loadDataAndConfigureTable($event)" [paginator]="true">
-
+  (onLazyLoad)="loadDataAndConfigureTable($event)" [paginator]="true" [responsive]="true">
   <ng-template pTemplate="caption">
 
     <div class="ui-g">
@@ -122,9 +121,10 @@
 
       <td>
 
-        <ul>
+        <ul class="nobullet">
           <li *ngFor="let ss of item.residentsObj">
-            <a class="pointer" (click)="displayModalPannel(ss,'people')">{{ss.name}}</a>
+            <a class="pointer" (click)="displayModalPannel(ss,'people')">
+              <img src="/assets/i.png">{{ss.name}}</a>
           </li>
         </ul>
 
@@ -133,9 +133,10 @@
 
       <td>
 
-        <ul>
+        <ul class="nobullet">
           <li *ngFor="let ss of item.filmsObj">
-            <a class="pointer" (click)="displayModalPannel(ss,'film')">{{ss.title}}</a>
+            <a class="pointer" (click)="displayModalPannel(ss,'film')">
+              <img src="/assets/i.png">{{ss.title}}</a>
           </li>
         </ul>
 

@@ -1,23 +1,27 @@
-<div class="ui-g">
-  <div class="ui-g-2">
+<div class="ui-g ui-fluid">
+
+  <div class="ui-g-2" style="text-align: left;">
     <a target="_new" href="https://commons.wikimedia.org/wiki/File:Star_Wars_Logo_2.svg#/media/File:Star_Wars_Logo_2.svg">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Star_Wars_Logo_2.svg/100px-Star_Wars_Logo_2.svg.png"
-        alt="Star Wars Logo 2.svg">
+        alt="Star Wars Logo 2.svg" style="max-height: 60px;">
     </a>
   </div>
-  <div class="ui-g-8">
-    <span *ngFor="let key of keys" style="float:left;margin-left:30px;">
-      <button pButton type="button" label="{{key}}" class="ui-button-warning" (click)="onClickNavigateList(key)"></button>
 
-    </span>
+  <div class="ui-g-8">
+    <p-tabMenu [model]="items"></p-tabMenu>
   </div>
-  <div class="ui-g-2">
+
+  <div class="ui-g-2" style="text-align: right;">
     <a href="https://swapi.co" target="_new">
-      <img src="/assets/swapi.png" alt="API from swapi.co" height="60px;">
+      <img src="/assets/swapi.png" alt="API from swapi.co" style="max-height: 60px;">
     </a>
   </div>
+
+
 
   <div class="ui-g-12">
+
     <router-outlet></router-outlet>
   </div>
+
 </div>

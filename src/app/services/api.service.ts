@@ -104,7 +104,7 @@ export class ApiService {
   }
 
   /**
-   *Elaborazione delle lookup, estrae i figli
+   * Elaborazione delle lookup, estrae i figli
    *
    * @param {*} item
    * @returns

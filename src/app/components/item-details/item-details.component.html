@@ -1,5 +1,5 @@
-<p-dialog (onHide)="onHideModal($event)" header="{{modalItem?.name}}{{modalItem?.title}}" [(visible)]="displayModal" [width]="500"
-  [modal]="true" *ngIf="modalItem">
+<p-dialog (onHide)="onHideModal($event)" width="300" header="{{modalItem?.name}}{{modalItem?.title}}" [(visible)]="displayModal"
+  [modal]="true" *ngIf="modalItem" [responsive]=true>
 
   <p-table [value]="customFields">
     <ng-template pTemplate="body" let-item>

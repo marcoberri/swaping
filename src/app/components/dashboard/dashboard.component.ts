@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ApiService } from '../../services/api.service';
+import { MenuItem } from 'primeng/api';
 /**
  *Gestione della dashboard principale del sito
  *
@@ -22,27 +22,9 @@ export class DashboardComponent implements OnInit {
    * @param {ApiService} apiService
    * @memberof DashboardComponent
    */
-  constructor(
-    private httpClient: HttpClient,
-    private router: Router,
-    private apiService: ApiService
-  ) {}
+  constructor(private router: Router, private apiService: ApiService) {}
 
-  /**
-   * Dati di passaggio utilizzati per il caricamento dei dati in  tabella
-   *
-   * @type {*}
-   * @memberof DashboardComponent
-   */
-  public loadData: any;
-
-  /**
-   * Chiavi dell'object utilizzato per generare le colonne della tabella
-   *
-   * @type {*}
-   * @memberof DashboardComponent
-   */
-  public keys: any;
+  public items: MenuItem[] = [];
 
   /**
    *Inizializza il componente caricando i dati
@@ -54,25 +36,22 @@ export class DashboardComponent implements OnInit {
   }
 
   /**
-   * Evento di click sulla navigazione
-   *
-   * @param {string} page
-   * @memberof DashboardComponent
-   */
-  public onClickNavigateList(page: string) {
-    this.router.navigate([`/list/${page}`]);
-  }
-
-  /**
-   * Caricamento dati
+   * Creazione menu superiore
    *
    * @private
    * @memberof DashboardComponent
    */
   private loadMain() {
     this.apiService.getUrl().then(data => {
-      this.loadData = data;
-      this.keys = Object.keys(data);
+      Object.keys(data).forEach(element => {
+        console.log('ele:' + element);
+        if (element) {
+          this.items.push({
+            label: element,
+            routerLink: 'list/' + element
+          });
+        }
+      });
     });
   }
 }

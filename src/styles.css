@@ -13,8 +13,7 @@ body {
 }
 
 ul {
-  list-style-image: url('/assets/i.png');
-  padding-left: 1.5em;
+  padding-left: 0em;
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -56,4 +55,18 @@ td {
 
 .ui-button-text {
   text-transform: uppercase !important;
+}
+
+.ui-menuitem-text {
+  text-transform: uppercase !important;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.ui-tabmenu {
+  background: #1c1e22 !important;
+}
+
+.ui-tabmenuitem {
+  min-width: 100px !important;
 }
