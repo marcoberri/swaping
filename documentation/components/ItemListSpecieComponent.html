@@ -1386,7 +1386,7 @@ export class ItemListSpecieComponent extends ItemListBase {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;p-table [value]&#x3D;&quot;loadData&quot; [totalRecords]&#x3D;&quot;totalRecords&quot; [paginator]&#x3D;&quot;true&quot; [rows]&#x3D;&quot;10&quot; [loading]&#x3D;&quot;loading&quot; [lazy]&#x3D;&quot;true&quot;
-  (onLazyLoad)&#x3D;&quot;loadDataAndConfigureTable($event)&quot; [paginator]&#x3D;&quot;true&quot;&gt;
+  (onLazyLoad)&#x3D;&quot;loadDataAndConfigureTable($event)&quot; [paginator]&#x3D;&quot;true&quot; [responsive]&#x3D;&quot;true&quot;&gt;
 
   &lt;ng-template pTemplate&#x3D;&quot;caption&quot;&gt;
 
@@ -1506,7 +1506,8 @@ export class ItemListSpecieComponent extends ItemListBase {
       &lt;/td&gt;
 
       &lt;td class&#x3D;&quot;center&quot;&gt;
-        &lt;a class&#x3D;&quot;pointer&quot; (click)&#x3D;&quot;displayModalPannel(item.homeworldObj,&#x27;planet&#x27;)&quot;&gt;{{item.homeworldObj?.name}}&lt;/a&gt;
+        &lt;a class&#x3D;&quot;pointer&quot; (click)&#x3D;&quot;displayModalPannel(item.homeworldObj,&#x27;planet&#x27;)&quot;&gt;
+          &lt;img src&#x3D;&quot;/assets/i.png&quot;&gt;{{item.homeworldObj?.name}}&lt;/a&gt;
       &lt;/td&gt;
 
       &lt;td class&#x3D;&quot;center&quot;&gt;
@@ -1515,9 +1516,10 @@ export class ItemListSpecieComponent extends ItemListBase {
 
       &lt;td&gt;
 
-        &lt;ul&gt;
+        &lt;ul class&#x3D;&quot;nobullet&quot;&gt;
           &lt;li *ngFor&#x3D;&quot;let ss of item.peoplesObj&quot;&gt;
-            &lt;a class&#x3D;&quot;pointer&quot; (click)&#x3D;&quot;displayModalPannel(ss,&#x27;people&#x27;)&quot;&gt;{{ss.name}}&lt;/a&gt;
+            &lt;a class&#x3D;&quot;pointer&quot; (click)&#x3D;&quot;displayModalPannel(ss,&#x27;people&#x27;)&quot;&gt;
+              &lt;img src&#x3D;&quot;/assets/i.png&quot;&gt;{{ss.name}}&lt;/a&gt;
           &lt;/li&gt;
         &lt;/ul&gt;
 
@@ -1526,9 +1528,10 @@ export class ItemListSpecieComponent extends ItemListBase {
 
       &lt;td&gt;
 
-        &lt;ul&gt;
+        &lt;ul class&#x3D;&quot;nobullet&quot;&gt;
           &lt;li *ngFor&#x3D;&quot;let ss of item.filmsObj&quot;&gt;
-            &lt;a class&#x3D;&quot;pointer&quot; (click)&#x3D;&quot;displayModalPannel(ss,&#x27;film&#x27;)&quot;&gt;{{ss.title}}&lt;/a&gt;
+            &lt;a class&#x3D;&quot;pointer&quot; (click)&#x3D;&quot;displayModalPannel(ss,&#x27;film&#x27;)&quot;&gt;
+              &lt;img src&#x3D;&quot;/assets/i.png&quot;&gt;{{ss.title}}&lt;/a&gt;
           &lt;/li&gt;
         &lt;/ul&gt;
 
@@ -1568,7 +1571,7 @@ export class ItemListSpecieComponent extends ItemListBase {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p-table [value]="loadData" [totalRecords]="totalRecords" [paginator]="true" [rows]="10" [loading]="loading" [lazy]="true"  (onLazyLoad)="loadDataAndConfigureTable($event)" [paginator]="true">  <ng-template pTemplate="caption">    <div class="ui-g">      <div class="ui-g-2">      </div>      <div class="ui-g-8">        <span class="headerTable">{{mainUrl}}</span>      </div>      <div class="ui-g-2"></div>    </div>  </ng-template>  <ng-template pTemplate="header">    <tr>      <th>        Name      </th>      <th style="width: 80px;">        Average height      </th>      <th style="width: 80px;">        Average lifespan      </th>      <th>        Classification      </th>      <th style="width: 80px;">        Designation      </th>      <th style="width: 80px;">        skin colors      </th>      <th style="width: 80px;">        eye colors      </th>      <th style="width: 80px;">        hair colors      </th>      <th>        Homeworld      </th>      <th>        Language      </th>      <th>        People      </th>      <th>        Film      </th>    </tr>  </ng-template>  <ng-template pTemplate="body" let-item>    <tr>      <td class="main">        {{item.name}}      </td>      <td class="center">        {{item.average_height}}      </td>      <td class="center">        {{item.average_lifespan}}      </td>      <td class="center">        {{item.classification}}      </td>      <td class="center">        {{item.designation}}      </td>      <td class="center">        {{item.skin_colors}}      </td>      <td class="center">        {{item.eye_colors}}      </td>      <td class="center">        {{item.hair_colors}}      </td>      <td class="center">        <a class="pointer" (click)="displayModalPannel(item.homeworldObj,\'planet\')">{{item.homeworldObj?.name}}</a>      </td>      <td class="center">        {{item.language}}      </td>      <td>        <ul>          <li *ngFor="let ss of item.peoplesObj">            <a class="pointer" (click)="displayModalPannel(ss,\'people\')">{{ss.name}}</a>          </li>        </ul>      </td>      <td>        <ul>          <li *ngFor="let ss of item.filmsObj">            <a class="pointer" (click)="displayModalPannel(ss,\'film\')">{{ss.title}}</a>          </li>        </ul>      </td>    </tr>  </ng-template></p-table><app-item-details (onChiudi)="resetModal($event)" [objecttype]="modalType" [modalItem]="modalItem" [displayModal]="displayModalDetail"></app-item-details></div>'
+        var COMPONENT_TEMPLATE = '<div><p-table [value]="loadData" [totalRecords]="totalRecords" [paginator]="true" [rows]="10" [loading]="loading" [lazy]="true"  (onLazyLoad)="loadDataAndConfigureTable($event)" [paginator]="true" [responsive]="true">  <ng-template pTemplate="caption">    <div class="ui-g">      <div class="ui-g-2">      </div>      <div class="ui-g-8">        <span class="headerTable">{{mainUrl}}</span>      </div>      <div class="ui-g-2"></div>    </div>  </ng-template>  <ng-template pTemplate="header">    <tr>      <th>        Name      </th>      <th style="width: 80px;">        Average height      </th>      <th style="width: 80px;">        Average lifespan      </th>      <th>        Classification      </th>      <th style="width: 80px;">        Designation      </th>      <th style="width: 80px;">        skin colors      </th>      <th style="width: 80px;">        eye colors      </th>      <th style="width: 80px;">        hair colors      </th>      <th>        Homeworld      </th>      <th>        Language      </th>      <th>        People      </th>      <th>        Film      </th>    </tr>  </ng-template>  <ng-template pTemplate="body" let-item>    <tr>      <td class="main">        {{item.name}}      </td>      <td class="center">        {{item.average_height}}      </td>      <td class="center">        {{item.average_lifespan}}      </td>      <td class="center">        {{item.classification}}      </td>      <td class="center">        {{item.designation}}      </td>      <td class="center">        {{item.skin_colors}}      </td>      <td class="center">        {{item.eye_colors}}      </td>      <td class="center">        {{item.hair_colors}}      </td>      <td class="center">        <a class="pointer" (click)="displayModalPannel(item.homeworldObj,\'planet\')">          <img src="/assets/i.png">{{item.homeworldObj?.name}}</a>      </td>      <td class="center">        {{item.language}}      </td>      <td>        <ul class="nobullet">          <li *ngFor="let ss of item.peoplesObj">            <a class="pointer" (click)="displayModalPannel(ss,\'people\')">              <img src="/assets/i.png">{{ss.name}}</a>          </li>        </ul>      </td>      <td>        <ul class="nobullet">          <li *ngFor="let ss of item.filmsObj">            <a class="pointer" (click)="displayModalPannel(ss,\'film\')">              <img src="/assets/i.png">{{ss.title}}</a>          </li>        </ul>      </td>    </tr>  </ng-template></p-table><app-item-details (onChiudi)="resetModal($event)" [objecttype]="modalType" [modalItem]="modalItem" [displayModal]="displayModalDetail"></app-item-details></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'ItemDetailsComponent', 'selector': 'app-item-details'},{'name': 'ItemListFilmComponent', 'selector': 'app-item-list-film'},{'name': 'ItemListPeopleComponent', 'selector': 'app-item-list-people'},{'name': 'ItemListPlanetComponent', 'selector': 'app-item-list-planet'},{'name': 'ItemListSpecieComponent', 'selector': 'app-item-list-specie'},{'name': 'ItemListStarshipComponent', 'selector': 'app-item-list-starship'},{'name': 'ItemListVehicleComponent', 'selector': 'app-item-list-vehicle'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ItemListSpecieComponent'};

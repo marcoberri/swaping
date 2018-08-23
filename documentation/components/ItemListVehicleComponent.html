@@ -1386,7 +1386,7 @@ export class ItemListVehicleComponent extends ItemListBase {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;p-table [value]&#x3D;&quot;loadData&quot; [totalRecords]&#x3D;&quot;totalRecords&quot; [paginator]&#x3D;&quot;true&quot; [rows]&#x3D;&quot;10&quot; [loading]&#x3D;&quot;loading&quot; [lazy]&#x3D;&quot;true&quot;
-  (onLazyLoad)&#x3D;&quot;loadDataAndConfigureTable($event)&quot; [paginator]&#x3D;&quot;true&quot;&gt;
+  (onLazyLoad)&#x3D;&quot;loadDataAndConfigureTable($event)&quot; [paginator]&#x3D;&quot;true&quot; [responsive]&#x3D;&quot;true&quot;&gt;
   &lt;ng-template pTemplate&#x3D;&quot;caption&quot;&gt;
 
     &lt;div class&#x3D;&quot;ui-g&quot;&gt;
@@ -1503,9 +1503,10 @@ export class ItemListVehicleComponent extends ItemListBase {
 
       &lt;td&gt;
 
-        &lt;ul&gt;
+        &lt;ul class&#x3D;&quot;nobullet&quot;&gt;
           &lt;li *ngFor&#x3D;&quot;let ss of item.pilotsObj&quot;&gt;
-            &lt;a class&#x3D;&quot;pointer&quot; (click)&#x3D;&quot;displayModalPannel(ss,&#x27;people&#x27;)&quot;&gt;{{ss.name}}&lt;/a&gt;
+            &lt;a class&#x3D;&quot;pointer&quot; (click)&#x3D;&quot;displayModalPannel(ss,&#x27;people&#x27;)&quot;&gt;
+              &lt;img src&#x3D;&quot;/assets/i.png&quot;&gt;{{ss.name}}&lt;/a&gt;
           &lt;/li&gt;
         &lt;/ul&gt;
 
@@ -1516,9 +1517,10 @@ export class ItemListVehicleComponent extends ItemListBase {
 
       &lt;td&gt;
 
-        &lt;ul&gt;
+        &lt;ul class&#x3D;&quot;nobullet&quot;&gt;
           &lt;li *ngFor&#x3D;&quot;let ss of item.filmsObj&quot;&gt;
-            &lt;a class&#x3D;&quot;pointer&quot; (click)&#x3D;&quot;displayModalPannel(ss,&#x27;film&#x27;)&quot;&gt;{{ss.title}}&lt;/a&gt;
+            &lt;a class&#x3D;&quot;pointer&quot; (click)&#x3D;&quot;displayModalPannel(ss,&#x27;film&#x27;)&quot;&gt;
+              &lt;img src&#x3D;&quot;/assets/i.png&quot;&gt;{{ss.title}}&lt;/a&gt;
           &lt;/li&gt;
         &lt;/ul&gt;
 
@@ -1527,9 +1529,6 @@ export class ItemListVehicleComponent extends ItemListBase {
     &lt;/tr&gt;
   &lt;/ng-template&gt;
 &lt;/p-table&gt;
-
-
-&lt;app-item-details (onChiudi)&#x3D;&quot;resetModal($event)&quot; [objecttype]&#x3D;&quot;modalType&quot; [modalItem]&#x3D;&quot;modalItem&quot; [displayModal]&#x3D;&quot;displayModalDetail&quot;&gt;&lt;/app-item-details&gt;
 </code></pre>
     </div>
 
@@ -1558,7 +1557,7 @@ export class ItemListVehicleComponent extends ItemListBase {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p-table [value]="loadData" [totalRecords]="totalRecords" [paginator]="true" [rows]="10" [loading]="loading" [lazy]="true"  (onLazyLoad)="loadDataAndConfigureTable($event)" [paginator]="true">  <ng-template pTemplate="caption">    <div class="ui-g">      <div class="ui-g-2">      </div>      <div class="ui-g-8">        <span class="headerTable">{{mainUrl}}</span>      </div>      <div class="ui-g-2"></div>    </div>  </ng-template>  <ng-template pTemplate="header">    <tr>      <th>        Name      </th>      <th>        Model      </th>      <th>        Class      </th>      <th>        Cargo Capacity      </th>      <th>        Cost in credits      </th>      <th>Crew</th>      <th>        Consumables      </th>      <th>        Length      </th>      <th>        Max atmosphering speed      </th>      <th>        Pilots      </th>      <th>        Film      </th>    </tr>  </ng-template>  <ng-template pTemplate="body" let-item>    <tr>      <td class="main">        {{item.name}}      </td>      <td class="center">        {{item.model}}      </td>      <td class="center">        {{item.vehicle_class}}      </td>      <td class="center" style="width: 80px;">        {{item.cargo_capacity}}      </td>      <td class="center">        {{item.cost_in_credits}}      </td>      <td class="center" style="width: 80px;">        {{item.crew}}      </td>      <td class="center">        {{item.consumables}}      </td>      <td class="center" style="width: 80px;">        {{item.length}}      </td>      <td class="center">        {{item.max_atmosphering_speed}}      </td>      <td>        <ul>          <li *ngFor="let ss of item.pilotsObj">            <a class="pointer" (click)="displayModalPannel(ss,\'people\')">{{ss.name}}</a>          </li>        </ul>      </td>      <td>        <ul>          <li *ngFor="let ss of item.filmsObj">            <a class="pointer" (click)="displayModalPannel(ss,\'film\')">{{ss.title}}</a>          </li>        </ul>      </td>    </tr>  </ng-template></p-table><app-item-details (onChiudi)="resetModal($event)" [objecttype]="modalType" [modalItem]="modalItem" [displayModal]="displayModalDetail"></app-item-details></div>'
+        var COMPONENT_TEMPLATE = '<div><p-table [value]="loadData" [totalRecords]="totalRecords" [paginator]="true" [rows]="10" [loading]="loading" [lazy]="true"  (onLazyLoad)="loadDataAndConfigureTable($event)" [paginator]="true" [responsive]="true">  <ng-template pTemplate="caption">    <div class="ui-g">      <div class="ui-g-2">      </div>      <div class="ui-g-8">        <span class="headerTable">{{mainUrl}}</span>      </div>      <div class="ui-g-2"></div>    </div>  </ng-template>  <ng-template pTemplate="header">    <tr>      <th>        Name      </th>      <th>        Model      </th>      <th>        Class      </th>      <th>        Cargo Capacity      </th>      <th>        Cost in credits      </th>      <th>Crew</th>      <th>        Consumables      </th>      <th>        Length      </th>      <th>        Max atmosphering speed      </th>      <th>        Pilots      </th>      <th>        Film      </th>    </tr>  </ng-template>  <ng-template pTemplate="body" let-item>    <tr>      <td class="main">        {{item.name}}      </td>      <td class="center">        {{item.model}}      </td>      <td class="center">        {{item.vehicle_class}}      </td>      <td class="center" style="width: 80px;">        {{item.cargo_capacity}}      </td>      <td class="center">        {{item.cost_in_credits}}      </td>      <td class="center" style="width: 80px;">        {{item.crew}}      </td>      <td class="center">        {{item.consumables}}      </td>      <td class="center" style="width: 80px;">        {{item.length}}      </td>      <td class="center">        {{item.max_atmosphering_speed}}      </td>      <td>        <ul class="nobullet">          <li *ngFor="let ss of item.pilotsObj">            <a class="pointer" (click)="displayModalPannel(ss,\'people\')">              <img src="/assets/i.png">{{ss.name}}</a>          </li>        </ul>      </td>      <td>        <ul class="nobullet">          <li *ngFor="let ss of item.filmsObj">            <a class="pointer" (click)="displayModalPannel(ss,\'film\')">              <img src="/assets/i.png">{{ss.title}}</a>          </li>        </ul>      </td>    </tr>  </ng-template></p-table></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'ItemDetailsComponent', 'selector': 'app-item-details'},{'name': 'ItemListFilmComponent', 'selector': 'app-item-list-film'},{'name': 'ItemListPeopleComponent', 'selector': 'app-item-list-people'},{'name': 'ItemListPlanetComponent', 'selector': 'app-item-list-planet'},{'name': 'ItemListSpecieComponent', 'selector': 'app-item-list-specie'},{'name': 'ItemListStarshipComponent', 'selector': 'app-item-list-starship'},{'name': 'ItemListVehicleComponent', 'selector': 'app-item-list-vehicle'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ItemListVehicleComponent'};
