@@ -833,28 +833,20 @@ export class DashboardComponent implements OnInit {
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;ui-g ui-fluid&quot;&gt;
 
-  &lt;div class&#x3D;&quot;ui-g-2&quot; style&#x3D;&quot;text-align: left;&quot;&gt;
-    &lt;a target&#x3D;&quot;_new&quot; href&#x3D;&quot;https://commons.wikimedia.org/wiki/File:Star_Wars_Logo_2.svg#/media/File:Star_Wars_Logo_2.svg&quot;&gt;
-      &lt;img src&#x3D;&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Star_Wars_Logo_2.svg/100px-Star_Wars_Logo_2.svg.png&quot;
-        alt&#x3D;&quot;Star Wars Logo 2.svg&quot; style&#x3D;&quot;max-height: 60px;&quot;&gt;
-    &lt;/a&gt;
-  &lt;/div&gt;
 
-  &lt;div class&#x3D;&quot;ui-g-8&quot;&gt;
+  &lt;div class&#x3D;&quot;ui-g-11&quot;&gt;
     &lt;p-tabMenu [model]&#x3D;&quot;items&quot;&gt;&lt;/p-tabMenu&gt;
   &lt;/div&gt;
 
-  &lt;div class&#x3D;&quot;ui-g-2&quot; style&#x3D;&quot;text-align: right;&quot;&gt;
+  &lt;div class&#x3D;&quot;ui-g-1&quot;&gt;
     &lt;a href&#x3D;&quot;https://swapi.co&quot; target&#x3D;&quot;_new&quot;&gt;
-      &lt;img src&#x3D;&quot;/assets/swapi.png&quot; alt&#x3D;&quot;API from swapi.co&quot; style&#x3D;&quot;max-height: 60px;&quot;&gt;
+      &lt;img src&#x3D;&quot;/assets/swapi.png&quot; alt&#x3D;&quot;API from swapi.co&quot; height&#x3D;&quot;48&quot;&gt;
     &lt;/a&gt;
-  &lt;/div&gt;
+    &lt;a target&#x3D;&quot;_new&quot; href&#x3D;&quot;https://commons.wikimedia.org/wiki/File:Star_Wars_Logo_2.svg#/media/File:Star_Wars_Logo_2.svg&quot;&gt;
+      &lt;img src&#x3D;&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Star_Wars_Logo_2.svg/100px-Star_Wars_Logo_2.svg.png&quot;
+        alt&#x3D;&quot;Star Wars Logo 2.svg&quot; height&#x3D;&quot;48&quot;&gt;
+    &lt;/a&gt;
 
-
-
-  &lt;div class&#x3D;&quot;ui-g-12&quot;&gt;
-
-    &lt;router-outlet&gt;&lt;/router-outlet&gt;
   &lt;/div&gt;
 
 &lt;/div&gt;
@@ -886,7 +878,7 @@ export class DashboardComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="ui-g ui-fluid">  <div class="ui-g-2" style="text-align: left;">    <a target="_new" href="https://commons.wikimedia.org/wiki/File:Star_Wars_Logo_2.svg#/media/File:Star_Wars_Logo_2.svg">      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Star_Wars_Logo_2.svg/100px-Star_Wars_Logo_2.svg.png"        alt="Star Wars Logo 2.svg" style="max-height: 60px;">    </a>  </div>  <div class="ui-g-8">    <p-tabMenu [model]="items"></p-tabMenu>  </div>  <div class="ui-g-2" style="text-align: right;">    <a href="https://swapi.co" target="_new">      <img src="/assets/swapi.png" alt="API from swapi.co" style="max-height: 60px;">    </a>  </div>  <div class="ui-g-12">    <router-outlet></router-outlet>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="ui-g ui-fluid">  <div class="ui-g-11">    <p-tabMenu [model]="items"></p-tabMenu>  </div>  <div class="ui-g-1">    <a href="https://swapi.co" target="_new">      <img src="/assets/swapi.png" alt="API from swapi.co" height="48">    </a>    <a target="_new" href="https://commons.wikimedia.org/wiki/File:Star_Wars_Logo_2.svg#/media/File:Star_Wars_Logo_2.svg">      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Star_Wars_Logo_2.svg/100px-Star_Wars_Logo_2.svg.png"        alt="Star Wars Logo 2.svg" height="48">    </a>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'ItemDetailsComponent', 'selector': 'app-item-details'},{'name': 'ItemListFilmComponent', 'selector': 'app-item-list-film'},{'name': 'ItemListPeopleComponent', 'selector': 'app-item-list-people'},{'name': 'ItemListPlanetComponent', 'selector': 'app-item-list-planet'},{'name': 'ItemListSpecieComponent', 'selector': 'app-item-list-specie'},{'name': 'ItemListStarshipComponent', 'selector': 'app-item-list-starship'},{'name': 'ItemListVehicleComponent', 'selector': 'app-item-list-vehicle'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'DashboardComponent'};

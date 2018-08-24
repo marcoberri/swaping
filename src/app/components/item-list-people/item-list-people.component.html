@@ -52,7 +52,7 @@
     <tr>
       <td class="{{item.gender}}">
 
-        <span class="main">
+        <span class="main" *ngIf="item.name">
           {{item.name}}
         </span>
 
@@ -63,7 +63,7 @@
 
       <td>
 
-        <a class="pointer" (click)="displayModalPannel(item.homeworldObj,'planet')">
+        <a *ngIf="item.homeworldObj && item.homeworldObj.name" class="pointer" (click)="displayModalPannel(item.homeworldObj,'planet')">
           {{item.homeworldObj.name}}
           <img src="/assets/i.png">
         </a>
@@ -125,9 +125,9 @@
 
           <div class="ui-g-3" style="text-align: left;">
 
-            <ul class="nobullet">
+            <ul class="nobullet" *ngIf="rowData.vehiclesObj">
               <li *ngFor="let ss of rowData.vehiclesObj">
-                <a class="pointer" (click)="displayModalPannel(ss, 'veichle')">
+                <a *ngIf="ss.name" class="pointer" (click)="displayModalPannel(ss, 'veichle')">
                   {{ss.name}}
                   <img src="/assets/i.png">
                 </a>
@@ -139,9 +139,9 @@
 
           <div class="ui-g-3" style="text-align: left;">
 
-            <ul class="nobullet">
+            <ul class="nobullet" *ngIf="rowData.starshipsObj">
               <li *ngFor="let ss of rowData.starshipsObj">
-                <a class="pointer" (click)="displayModalPannel(rowData.starshipsObj[0], 'starship')">
+                <a *ngIf="ss.name" class="pointer" (click)="displayModalPannel(rowData.starshipsObj[0], 'starship')">
                   {{ss.name}}
                   <img src="/assets/i.png">
                 </a>
@@ -153,9 +153,9 @@
 
           <div class="ui-g-3" style="text-align: left;">
 
-            <ul class="nobullet">
+            <ul class="nobullet" *ngIf="rowData.filmsObj">
               <li *ngFor="let ss of rowData.filmsObj">
-                <a class="pointer" (click)="displayModalPannel(ss, 'film')">
+                <a *ngIf="ss.title" class="pointer" (click)="displayModalPannel(ss, 'film')">
                   {{ss.title}}
                   <img src="/assets/i.png">
                 </a>

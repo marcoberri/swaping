@@ -625,16 +625,18 @@ export class AppComponent {
         <pre class="line-numbers"><code class="language-html">&lt;app-dashboard&gt;
 &lt;/app-dashboard&gt;
 
-&lt;div&gt;
-  &lt;router-outlet&gt;&lt;/router-outlet&gt;
-&lt;/div&gt;
+&lt;div class&#x3D;&quot;ui-g ui-fluid&quot;&gt;
+  &lt;div class&#x3D;&quot;ui-g-12&quot;&gt;
+    &lt;router-outlet&gt;&lt;/router-outlet&gt;
+  &lt;/div&gt;
 
-&lt;div style&#x3D;&quot;width:100%;text-align:center;color:white&quot;&gt;
-  v.{{version}} -
-  &lt;a href&#x3D;&quot;https://tecnicume.blogspot.com&quot; target&#x3D;&quot;_new&quot;&gt;TECNICUME&lt;/a&gt;
-  -
-  &lt;a href&#x3D;&quot;https://github.com/marcoberri/swaping&quot; target&#x3D;&quot;_new&quot;&gt;github&lt;/a&gt;
+  &lt;div class&#x3D;&quot;ui-g-12&quot; style&#x3D;&quot;width:100%;text-align:center;color:white&quot;&gt;
+    v.{{version}} -
+    &lt;a href&#x3D;&quot;https://tecnicume.blogspot.com&quot; target&#x3D;&quot;_new&quot;&gt;TECNICUME&lt;/a&gt;
+    -
+    &lt;a href&#x3D;&quot;https://github.com/marcoberri/swaping&quot; target&#x3D;&quot;_new&quot;&gt;github&lt;/a&gt;
 
+  &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
     </div>
@@ -664,7 +666,7 @@ export class AppComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><app-dashboard></app-dashboard><div>  <router-outlet></router-outlet></div><div style="width:100%;text-align:center;color:white">  v.{{version}} -  <a href="https://tecnicume.blogspot.com" target="_new">TECNICUME</a>  -  <a href="https://github.com/marcoberri/swaping" target="_new">github</a></div></div>'
+        var COMPONENT_TEMPLATE = '<div><app-dashboard></app-dashboard><div class="ui-g ui-fluid">  <div class="ui-g-12">    <router-outlet></router-outlet>  </div>  <div class="ui-g-12" style="width:100%;text-align:center;color:white">    v.{{version}} -    <a href="https://tecnicume.blogspot.com" target="_new">TECNICUME</a>    -    <a href="https://github.com/marcoberri/swaping" target="_new">github</a>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'ItemDetailsComponent', 'selector': 'app-item-details'},{'name': 'ItemListFilmComponent', 'selector': 'app-item-list-film'},{'name': 'ItemListPeopleComponent', 'selector': 'app-item-list-people'},{'name': 'ItemListPlanetComponent', 'selector': 'app-item-list-planet'},{'name': 'ItemListSpecieComponent', 'selector': 'app-item-list-specie'},{'name': 'ItemListStarshipComponent', 'selector': 'app-item-list-starship'},{'name': 'ItemListVehicleComponent', 'selector': 'app-item-list-vehicle'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
