@@ -1,5 +1,5 @@
 <p-table [value]="loadData" [totalRecords]="totalRecords" [paginator]="true" [rows]="10" [loading]="loading" [lazy]="true"
-  (onLazyLoad)="loadDataAndConfigureTable($event)" [paginator]="true" [responsive]="true">
+  (onLazyLoad)="loadDataAndConfigureTable($event)" dataKey="name" [paginator]="true" [responsive]="true">
 
   <ng-template pTemplate="caption">
 
@@ -21,53 +21,62 @@
       <th>
         Name
       </th>
-      <th style="width:60px;">
-        Height
-      </th>
-      <th style="width:80px;">
-        Hair Color
-      </th>
-      <th style="width:90px;">
-        Skin Color
-      </th>
-      <th style="width:80px;">
-        Eye Color
-      </th>
-      <th style="width:80px;">
+      <th>
         Birth Year
       </th>
       <th>
-        Starship
+        Homeworld
       </th>
       <th>
-        Veichles
+        Species
       </th>
 
       <th>
-        Film
+        Height
       </th>
+      <th>
+        Hair Color
+      </th>
+      <th>
+        Skin Color
+      </th>
+      <th>
+        Eye Color
+      </th>
+
+      <th style="width: 3em"></th>
 
     </tr>
   </ng-template>
-  <ng-template pTemplate="body" let-item>
+  <ng-template pTemplate="body" let-item let-expanded="expanded" let-columns="columns">
     <tr>
       <td class="{{item.gender}}">
 
         <span class="main">
           {{item.name}}
         </span>
-        <ul class="nobullet">
-          <li *ngFor="let ss of item.speciesObj">
 
-            <a class="pointer" (click)="displayModalPannel(ss,'specie')">
-              <img src="/assets/i.png">{{ss.name}}</a>
-          </li>
-          <li *ngIf="item.homeworldObj">
-            <a class="pointer" (click)="displayModalPannel(item.homeworldObj,'planet')">
-              <img src="/assets/i.png">{{item.homeworldObj.name}}</a>
-          </li>
-        </ul>
+      </td>
+      <td class="center" style="font-size: 0.9em">
+        {{item.birth_year}}
+      </td>
 
+      <td>
+
+        <a class="pointer" (click)="displayModalPannel(item.homeworldObj,'planet')">
+          {{item.homeworldObj.name}}
+          <img src="/assets/i.png">
+        </a>
+
+      </td>
+
+      <td>
+        <span *ngIf="item.speciesObj && item.speciesObj[0] && item.speciesObj[0].name">
+          <a class="pointer" (click)="displayModalPannel(item.speciesObj[0],'specie')">
+            {{item.speciesObj[0].name}}
+            <img src="/assets/i.png">
+          </a>
+        </span>
       </td>
       <td class="center">
         {{item.height}}
@@ -82,48 +91,84 @@
         {{item.eye_color}}
       </td>
 
-      <td class="center" style="font-size: 0.9em">
-        {{item.birth_year}}
-      </td>
 
       <td>
-
-        <ul class="nobullet">
-
-          <li *ngFor="let ss of item.starshipsObj">
-
-            <a class="pointer" (click)="displayModalPannel(ss,'starship')">
-              <img src="/assets/i.png">{{ss.name}}</a>
-          </li>
-        </ul>
-
+        <a href="#" [pRowToggler]="item">
+          <i [ngClass]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></i>
+        </a>
       </td>
 
-      <td>
-
-        <ul class="nobullet">
-          <li *ngFor="let ss of item.vehiclesObj">
-            <a class="pointer" (click)="displayModalPannel(ss,'veichle')">
-              <img src="/assets/i.png">{{ss.name}}</a>
-          </li>
-        </ul>
-
-      </td>
-
-
-      <td>
-
-        <ul class="nobullet">
-          <li *ngFor="let ss of item.filmsObj">
-            <a class="pointer" (click)="displayModalPannel(ss,'film')">
-              <img src="/assets/i.png">{{ss.title}}</a>
-          </li>
-        </ul>
-
-      </td>
 
     </tr>
   </ng-template>
+
+  <ng-template pTemplate="rowexpansion" let-rowData let-columns="columns">
+    <tr>
+      <td [attr.colspan]="9">
+        <div class="ui-g ui-fluid" style="background-color: aquamarine;">
+
+          <div class=" ui-g-3 subtitle">
+            Vehicles
+          </div>
+          <div class="ui-g-1"></div>
+
+          <div class="ui-g-3 subtitle">
+            Starship
+          </div>
+
+          <div class="ui-g-1"></div>
+
+          <div class="ui-g-3 subtitle">
+            Films
+          </div>
+
+
+          <div class="ui-g-3" style="text-align: left;">
+
+            <ul class="nobullet">
+              <li *ngFor="let ss of rowData.vehiclesObj">
+                <a class="pointer" (click)="displayModalPannel(ss, 'veichle')">
+                  {{ss.name}}
+                  <img src="/assets/i.png">
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="ui-g-1"></div>
+
+          <div class="ui-g-3" style="text-align: left;">
+
+            <ul class="nobullet">
+              <li *ngFor="let ss of rowData.starshipsObj">
+                <a class="pointer" (click)="displayModalPannel(rowData.starshipsObj[0], 'starship')">
+                  {{ss.name}}
+                  <img src="/assets/i.png">
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="ui-g-1"></div>
+
+          <div class="ui-g-3" style="text-align: left;">
+
+            <ul class="nobullet">
+              <li *ngFor="let ss of rowData.filmsObj">
+                <a class="pointer" (click)="displayModalPannel(ss, 'film')">
+                  {{ss.title}}
+                  <img src="/assets/i.png">
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </td>
+    </tr>
+  </ng-template>
+
 </p-table>
 
 

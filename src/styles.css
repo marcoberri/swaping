@@ -33,6 +33,7 @@ td {
 
 .nobullet {
   list-style: none !important;
+  padding-top: 0em;
 }
 
 .center {
@@ -69,4 +70,10 @@ td {
 
 .ui-tabmenuitem {
   min-width: 100px !important;
+}
+
+.subtitle {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3em;
 }
